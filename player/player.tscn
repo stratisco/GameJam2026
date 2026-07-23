@@ -45,15 +45,16 @@ size = Vector2(12, 8)
 [node name="Player" type="CharacterBody2D" unique_id=1171151227]
 motion_mode = 1
 script = ExtResource("1_rkbax")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1955491804]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_g6k8r")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.51790684
+frame_progress = 0.8767033
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2111062089]
-position = Vector2(0, 24)
-scale = Vector2(2, 2)
+position = Vector2(0, 36)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_boad6")
