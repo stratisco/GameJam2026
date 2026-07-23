@@ -64,4 +64,5 @@ Room D
 
 
 
-
+Docs:
+	Collision layer 1 is the walls and objects player collision layer
