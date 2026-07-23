@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dc8jh7c76730a"]
+
+[ext_resource type="PackedScene" uid="uid://qq7f556h4vdj" path="res://weirdPuzzle/weirdBoard.tscn" id="1_ryjsw"]
+
+[node name="Testing" type="Node2D" unique_id=2090602268]
+
+[node name="WeirdPuzzle" parent="." unique_id=814570385 instance=ExtResource("1_ryjsw")]
+position = Vector2(865, 483)
+scale = Vector2(6, 6)

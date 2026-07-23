@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://jpr1ci53gvts"]
+
+[ext_resource type="Texture2D" uid="uid://reafd00q5b13" path="res://weirdPuzzle/board_icons_15x15.png" id="1_ohiuc"]
+[ext_resource type="Script" uid="uid://dl84sxo465dhw" path="res://weirdPuzzle/board_button.gd" id="2_ca54s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca54s"]
+atlas = ExtResource("1_ohiuc")
+region = Rect2(0, 15, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uwl3"]
+atlas = ExtResource("1_ohiuc")
+region = Rect2(15, 15, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s14nb"]
+atlas = ExtResource("1_ohiuc")
+region = Rect2(30, 15, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s14nb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca54s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uwl3")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s14nb")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd04a"]
+size = Vector2(8.5, 8.5)
+
+[node name="BoardButton" type="AnimatedSprite2D" unique_id=323724088]
+sprite_frames = SubResource("SpriteFrames_s14nb")
+autoplay = "default"
+script = ExtResource("2_ca54s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2117025297]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=750501367]
+shape = SubResource("RectangleShape2D_nd04a")

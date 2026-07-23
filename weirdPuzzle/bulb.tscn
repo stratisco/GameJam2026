@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b2uos60h0rnqm"]
+
+[ext_resource type="Texture2D" uid="uid://reafd00q5b13" path="res://weirdPuzzle/board_icons_15x15.png" id="1_i4x1l"]
+[ext_resource type="Script" uid="uid://dij22i0mw866t" path="res://weirdPuzzle/bulb.gd" id="2_f38jm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f38jm"]
+atlas = ExtResource("1_i4x1l")
+region = Rect2(0, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdokx"]
+atlas = ExtResource("1_i4x1l")
+region = Rect2(15, 0, 15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wiern"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f38jm")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdokx")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="Bulb" type="AnimatedSprite2D" unique_id=725180699]
+sprite_frames = SubResource("SpriteFrames_wiern")
+animation = &"on"
+script = ExtResource("2_f38jm")
