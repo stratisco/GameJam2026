@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://qq7f556h4vdj"]
+
+[ext_resource type="Script" uid="uid://giiq16ayca3u" path="res://weirdPuzzle/weird_board.gd" id="1_pw38p"]
+[ext_resource type="Texture2D" uid="uid://doay1e7il1wg5" path="res://weirdPuzzle/weirdBoard.png" id="1_vhlc0"]
+[ext_resource type="PackedScene" uid="uid://b2uos60h0rnqm" path="res://weirdPuzzle/bulb.tscn" id="2_v7766"]
+[ext_resource type="PackedScene" uid="uid://jpr1ci53gvts" path="res://weirdPuzzle/boardButton.tscn" id="4_srvjv"]
+
+[node name="WeirdPuzzle" type="Node2D" unique_id=814570385]
+script = ExtResource("1_pw38p")
+
+[node name="Board" type="Sprite2D" parent="." unique_id=1368671008]
+texture = ExtResource("1_vhlc0")
+
+[node name="Bulbs" type="Node2D" parent="." unique_id=1896372423]
+
+[node name="Bulb" parent="Bulbs" unique_id=725180699 instance=ExtResource("2_v7766")]
+position = Vector2(-44, -51)
+
+[node name="Bulb2" parent="Bulbs" unique_id=1511424592 instance=ExtResource("2_v7766")]
+position = Vector2(-25, -51)
+
+[node name="Bulb3" parent="Bulbs" unique_id=639081047 instance=ExtResource("2_v7766")]
+position = Vector2(-6, -51)
+
+[node name="Bulb4" parent="Bulbs" unique_id=956259187 instance=ExtResource("2_v7766")]
+position = Vector2(13, -51)
+
+[node name="Bulb5" parent="Bulbs" unique_id=1177710357 instance=ExtResource("2_v7766")]
+position = Vector2(32, -51)
+
+[node name="Bulb6" parent="Bulbs" unique_id=138274260 instance=ExtResource("2_v7766")]
+position = Vector2(51, -51)
+
+[node name="Bulb7" parent="Bulbs" unique_id=1961535681 instance=ExtResource("2_v7766")]
+position = Vector2(70, -51)
+
+[node name="Bulb8" parent="Bulbs" unique_id=354729340 instance=ExtResource("2_v7766")]
+position = Vector2(-44, -32)
+
+[node name="Bulb9" parent="Bulbs" unique_id=673285964 instance=ExtResource("2_v7766")]
+position = Vector2(-25, -32)
+
+[node name="Bulb10" parent="Bulbs" unique_id=125696183 instance=ExtResource("2_v7766")]
+position = Vector2(-6, -32)
+
+[node name="Bulb11" parent="Bulbs" unique_id=322421751 instance=ExtResource("2_v7766")]
+position = Vector2(13, -32)
+
+[node name="Bulb12" parent="Bulbs" unique_id=833742263 instance=ExtResource("2_v7766")]
+position = Vector2(32, -32)
+
+[node name="Bulb13" parent="Bulbs" unique_id=599944000 instance=ExtResource("2_v7766")]
+position = Vector2(51, -32)
+
+[node name="Bulb14" parent="Bulbs" unique_id=266202350 instance=ExtResource("2_v7766")]
+position = Vector2(70, -32)
+
+[node name="Bulb15" parent="Bulbs" unique_id=788278300 instance=ExtResource("2_v7766")]
+position = Vector2(-44, -13)
+
+[node name="Bulb16" parent="Bulbs" unique_id=898324796 instance=ExtResource("2_v7766")]
+position = Vector2(-25, -13)
+
+[node name="Bulb17" parent="Bulbs" unique_id=144813581 instance=ExtResource("2_v7766")]
+position = Vector2(-6, -13)
+
+[node name="Bulb18" parent="Bulbs" unique_id=1571235143 instance=ExtResource("2_v7766")]
+position = Vector2(13, -13)
+
+[node name="Bulb19" parent="Bulbs" unique_id=1999083644 instance=ExtResource("2_v7766")]
+position = Vector2(32, -13)
+
+[node name="Bulb20" parent="Bulbs" unique_id=452678143 instance=ExtResource("2_v7766")]
+position = Vector2(51, -13)
+
+[node name="Bulb21" parent="Bulbs" unique_id=778056143 instance=ExtResource("2_v7766")]
+position = Vector2(70, -13)
+
+[node name="Bulb22" parent="Bulbs" unique_id=2126047771 instance=ExtResource("2_v7766")]
+position = Vector2(-44, 6)
+
+[node name="Bulb23" parent="Bulbs" unique_id=1885494623 instance=ExtResource("2_v7766")]
+position = Vector2(-25, 6)
+
+[node name="Bulb24" parent="Bulbs" unique_id=282027873 instance=ExtResource("2_v7766")]
+position = Vector2(-6, 6)
+
+[node name="Bulb25" parent="Bulbs" unique_id=789947652 instance=ExtResource("2_v7766")]
+position = Vector2(13, 6)
+
+[node name="Bulb26" parent="Bulbs" unique_id=1544680528 instance=ExtResource("2_v7766")]
+position = Vector2(32, 6)
+
+[node name="Bulb27" parent="Bulbs" unique_id=47169902 instance=ExtResource("2_v7766")]
+position = Vector2(51, 6)
+
+[node name="Bulb28" parent="Bulbs" unique_id=1878498127 instance=ExtResource("2_v7766")]
+position = Vector2(70, 6)
+
+[node name="Bulb29" parent="Bulbs" unique_id=1387061047 instance=ExtResource("2_v7766")]
+position = Vector2(-44, 25)
+
+[node name="Bulb30" parent="Bulbs" unique_id=1279698162 instance=ExtResource("2_v7766")]
+position = Vector2(-25, 25)
+
+[node name="Bulb31" parent="Bulbs" unique_id=904751358 instance=ExtResource("2_v7766")]
+position = Vector2(-6, 25)
+
+[node name="Bulb32" parent="Bulbs" unique_id=1066037186 instance=ExtResource("2_v7766")]
+position = Vector2(13, 25)
+
+[node name="Bulb33" parent="Bulbs" unique_id=1117290961 instance=ExtResource("2_v7766")]
+position = Vector2(32, 25)
+
+[node name="Bulb34" parent="Bulbs" unique_id=965319902 instance=ExtResource("2_v7766")]
+position = Vector2(51, 25)
+
+[node name="Bulb35" parent="Bulbs" unique_id=2023890665 instance=ExtResource("2_v7766")]
+position = Vector2(70, 25)
+
+[node name="Buttons" type="Node2D" parent="." unique_id=1073820258]
+
+[node name="BoardButton" parent="Buttons" unique_id=323724088 instance=ExtResource("4_srvjv")]
+position = Vector2(-70, -51)
+animation = &"default"
+
+[node name="BoardButton2" parent="Buttons" unique_id=1424087721 instance=ExtResource("4_srvjv")]
+position = Vector2(-70, -32)
+animation = &"default"
+
+[node name="BoardButton3" parent="Buttons" unique_id=991554592 instance=ExtResource("4_srvjv")]
+position = Vector2(-70, -13)
+animation = &"default"
+
+[node name="BoardButton4" parent="Buttons" unique_id=515386358 instance=ExtResource("4_srvjv")]
+position = Vector2(-70, 6)
+animation = &"default"
+
+[node name="BoardButton5" parent="Buttons" unique_id=655577659 instance=ExtResource("4_srvjv")]
+position = Vector2(-70, 25)
+animation = &"default"
+
+[node name="BoardButton6" parent="Buttons" unique_id=361137177 instance=ExtResource("4_srvjv")]
+position = Vector2(-44, 51)
+animation = &"default"
+
+[node name="BoardButton7" parent="Buttons" unique_id=1948784458 instance=ExtResource("4_srvjv")]
+position = Vector2(-25, 51)
+animation = &"default"
+
+[node name="BoardButton8" parent="Buttons" unique_id=1487134545 instance=ExtResource("4_srvjv")]
+position = Vector2(-6, 51)
+animation = &"default"
+
+[node name="BoardButton9" parent="Buttons" unique_id=15389323 instance=ExtResource("4_srvjv")]
+position = Vector2(13, 51)
+animation = &"default"
+
+[node name="BoardButton10" parent="Buttons" unique_id=1556182635 instance=ExtResource("4_srvjv")]
+position = Vector2(32, 51)
+animation = &"default"
+
+[node name="BoardButton11" parent="Buttons" unique_id=2000466599 instance=ExtResource("4_srvjv")]
+position = Vector2(51, 51)
+animation = &"default"
+
+[node name="BoardButton12" parent="Buttons" unique_id=252333308 instance=ExtResource("4_srvjv")]
+position = Vector2(70, 51)
+animation = &"default"

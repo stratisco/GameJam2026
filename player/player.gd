@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 ## Speed that the player moves through the map
-@export var PLAYER_SPEED := 300.0
+@export var PLAYER_SPEED := 350.0
 
 
 # player movement function
