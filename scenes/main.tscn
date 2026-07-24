@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btl7h5wq561pd" path="res://scenes/game_scene.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://cas6i70xqrfvb" path="res://player/player.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
 
 [node name="Node2D" type="Node2D" unique_id=2065037755]
 
@@ -12,3 +13,6 @@ position = Vector2(993, 669)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1927055518]
 position_smoothing_enabled = true
+
+[node name="CreditCard" parent="." unique_id=948972031 instance=ExtResource("3_sugp2")]
+position = Vector2(62, 385)

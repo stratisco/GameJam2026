@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://x0v4oil1m3bu"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_iaqs0"]
+[ext_resource type="Script" uid="uid://dl04qc3lvo3ei" path="res://creditCard/credit_card.gd" id="1_s3opf"]
+[ext_resource type="Texture2D" uid="uid://0lel48xvtte3" path="res://assets/creditcard.png" id="2_b68hv"]
+
+[node name="CreditCard" type="Node2D" unique_id=948972031]
+script = ExtResource("1_s3opf")
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_iaqs0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=187925729]
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("2_b68hv")
