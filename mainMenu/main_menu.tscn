@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://duh1073dnd8l5"]
+
+[ext_resource type="Script" uid="uid://daves7u8iujhp" path="res://mainMenu/main_menu.gd" id="1_27owx"]
+
+[node name="MainMenu" type="Control" unique_id=861669719]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_27owx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1492348351]
+layout_mode = 0
+offset_left = -131.0
+offset_top = -91.0
+offset_right = 2066.0
+offset_bottom = 1184.0
+color = Color(0.27, 0.27, 0.27, 1)
+
+[node name="Title" type="Label" parent="." unique_id=895667006]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 84.0
+offset_right = 1359.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 70
+text = "THE GAME (working title)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="." unique_id=1913558336]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 281.0
+offset_right = 1051.0
+offset_bottom = 341.0
+theme_override_font_sizes/font_size = 50
+text = "Play Game"
+
+[node name="DeveloperButtons" type="Control" parent="." unique_id=2074044264]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlatformerButton" type="Button" parent="DeveloperButtons" unique_id=328126832]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 122.0
+offset_right = 449.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 50
+text = "Play Platformer"
+
+[node name="XorButton" type="Button" parent="DeveloperButtons" unique_id=1770697614]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 213.0
+offset_right = 444.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 50
+text = "Play Xor Puzzle"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="DeveloperButtons/PlatformerButton" to="." method="_on_platformer_button_pressed"]
+[connection signal="pressed" from="DeveloperButtons/XorButton" to="." method="_on_xor_button_pressed"]

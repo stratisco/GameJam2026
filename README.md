@@ -13,9 +13,14 @@ The buttons however do not affect every bulb in their row/collumn and instead wi
 
 Example: If the button for collumn 1 is pressed the 2nd, 3rd and 5th bulb in collumn 1 will flip their state.
 
-*This puzzle UI can be ran by 'instantiating' the `res://weirdPuzzle/weirdBoard.tscn` to another scene (atm its in the testing scene)*
+*This puzzle UI can be ran by 'instantiating' the `res://weirdPuzzle/weirdBoard.tscn` to another scene*
 
+### Platformer room
+This room is meant to be an old retro style platform game
 
+Its very simple; you just get to the coin and then you win ^_^
+
+*This game UI can be ran by 'instantiating' the `res://platformer/platformer.tscn` to another scene*
 
 
 ## Docs
@@ -24,6 +29,8 @@ Example: If the button for collumn 1 is pressed the 2nd, 3rd and 5th bulb in col
 
 ## Credit
 Platformer Character: https://kevins-moms-house.itch.io/camelot *not needed but apprecheated or however you spell it*
+Platformer Coin: https://totuslotus.itch.io/pixel-coins?download
+
 
 ## Sketch
 

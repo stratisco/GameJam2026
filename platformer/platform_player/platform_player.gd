@@ -21,11 +21,11 @@ func _physics_process(delta: float) -> void:
 		coyote_timer -= delta
 
 	# allow jump if player is on ground or coyote cooldown is valid
-	if Input.is_action_just_pressed("player_jump") and coyote_timer > 0.0:
+	if Input.is_action_pressed("player_jump") and coyote_timer > 0.0:
 		velocity.y = JUMP_VELOCITY
 		coyote_timer = 0.0  # stop double jumping
 
-	# then handle directionm input
+	# then handle direction input
 	var direction := Input.get_axis("player_left", "player_right")
 	if direction:
 		velocity.x = direction * SPEED

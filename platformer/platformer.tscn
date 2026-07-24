@@ -1,32 +1,170 @@
 [gd_scene format=4 uid="uid://c6ksqajr1ng7"]
 
 [ext_resource type="Texture2D" uid="uid://dbbaoj20y6pbk" path="res://platformer/platform_tilest.png" id="1_fvjyy"]
+[ext_resource type="Script" uid="uid://dpw7wwavvycba" path="res://platformer/platformer.gd" id="1_w1qb0"]
 [ext_resource type="PackedScene" uid="uid://pnbktka7aoag" path="res://platformer/platform_player/platform_player.tscn" id="2_5vjwt"]
+[ext_resource type="PackedScene" uid="uid://qppiffd35js0" path="res://platformer/spike.tscn" id="2_g7gp6"]
+[ext_resource type="Texture2D" uid="uid://bx8d55uaxfvja" path="res://platformer/coin_16x16.png" id="5_nl76y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vjwt"]
 texture = ExtResource("1_fvjyy")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
 
 [sub_resource type="TileSet" id="TileSet_w1qb0"]
 physics_layer_0/collision_layer = 512
 physics_layer_0/collision_mask = 512
 sources/0 = SubResource("TileSetAtlasSource_5vjwt")
 
-[node name="Platformer" type="Node2D" unique_id=1342216673]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vjwt"]
+size = Vector2(3722, 140.5)
 
-[node name="Background" type="ColorRect" parent="." unique_id=80163658]
+[sub_resource type="AtlasTexture" id="AtlasTexture_je3qg"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmrb2"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufqir"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5jla"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll8sa"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6opx"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_livau"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alsi2"]
+atlas = ExtResource("5_nl76y")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_443q5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je3qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmrb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufqir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5jla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll8sa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6opx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_livau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alsi2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7gp6"]
+size = Vector2(13.75, 14)
+
+[node name="Platformer" type="Node2D" unique_id=1342216673]
+script = ExtResource("1_w1qb0")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1161917475]
+texture_filter = 1
 offset_right = 800.0
 offset_bottom = 500.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1608016157]
+handle_input_locally = false
+size = Vector2i(800, 500)
+render_target_update_mode = 4
+
+[node name="Background" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=80163658]
+offset_left = -53.0
+offset_top = -44.0
+offset_right = 887.0
+offset_bottom = 570.0
 color = Color(0.22352941, 0.12156863, 0.25882354, 1)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=402883951]
-tile_map_data = PackedByteArray("AAAFABkAAAABAAAAAAAGABkAAAABAAAAAAAHABkAAAABAAAAAAAIABkAAAABAAAAAAAJABkAAAABAAAAAAAKABkAAAABAAAAAAAPABkAAAABAAAAAAAQABkAAAABAAAAAAARABkAAAABAAAAAAASABkAAAABAAAAAAATABkAAAABAAAAAAAYABkAAAABAAAAAAAcABgAAAABAAAAAAAdABgAAAABAAAAAAAeABgAAAABAAAAAAAfABgAAAABAAAAAAAgABgAAAABAAAAAAAnABUAAAABAAAAAAAmABUAAAABAAAAAAAlABUAAAABAAAAAAAkABUAAAABAAAAAAAmABMAAAABAAAAAAAnABMAAAABAAAAAAAoABMAAAABAAAAAAApABMAAAABAAAAAAAqABMAAAABAAAAAAArABMAAAABAAAAAAAjABEAAAABAAAAAAAiABEAAAABAAAAAAAhABEAAAABAAAAAAAgABEAAAABAAAAAAAfABEAAAABAAAAAAAeABEAAAABAAAAAAAbAA8AAAABAAAAAAAaAA8AAAABAAAAAAAZAA8AAAABAAAAAAAYAA8AAAABAAAAAAAXAA8AAAABAAAAAAAWAA8AAAABAAAAAAAVAA8AAAABAAAAAAAUAA8AAAABAAAAAAARABEAAAABAAAAAAAQABEAAAABAAAAAAAPABEAAAABAAAAAAAOABEAAAABAAAAAAANABEAAAABAAAAAAATABMAAAABAAAAAAAFAAwAAAABAAAAAAAGAAwAAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAJAAwAAAABAAAAAAAKAAwAAAABAAAAAAALAA8AAAABAAAAAAA=")
+[node name="Spikes" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=1521285431]
+
+[node name="Spike" parent="SubViewportContainer/SubViewport/Spikes" unique_id=29566870 instance=ExtResource("2_g7gp6")]
+position = Vector2(295, 359)
+
+[node name="Spike2" parent="SubViewportContainer/SubViewport/Spikes" unique_id=1949989023 instance=ExtResource("2_g7gp6")]
+position = Vector2(503, 343)
+
+[node name="Spike3" parent="SubViewportContainer/SubViewport/Spikes" unique_id=1743832518 instance=ExtResource("2_g7gp6")]
+position = Vector2(696, 264)
+
+[node name="Spike4" parent="SubViewportContainer/SubViewport/Spikes" unique_id=1057601357 instance=ExtResource("2_g7gp6")]
+position = Vector2(397, 199)
+
+[node name="Spike5" parent="SubViewportContainer/SubViewport/Spikes" unique_id=475774634 instance=ExtResource("2_g7gp6")]
+position = Vector2(564, 233)
+
+[node name="Spike6" parent="SubViewportContainer/SubViewport/Spikes" unique_id=1747673422 instance=ExtResource("2_g7gp6")]
+position = Vector2(153, 152)
+
+[node name="Spike7" parent="SubViewportContainer/SubViewport/Spikes" unique_id=2136792822 instance=ExtResource("2_g7gp6")]
+position = Vector2(267, 233)
+
+[node name="Platforms" type="TileMapLayer" parent="SubViewportContainer/SubViewport" unique_id=402883951]
+tile_map_data = PackedByteArray("AAAmABMAAAABAAAAAAAnABMAAAABAAAAAAAoABMAAAABAAAAAAAGAAoAAAABAAAAAAAGABcAAAABAAAAAAAHAAoAAAABAAAAAAAHABcAAAABAAAAAAAIAAoAAAABAAAAAAAIABcAAAABAAAAAAAJAAoAAAABAAAAAAAJABcAAAABAAAAAAAKAAoAAAABAAAAAAAKABcAAAABAAAAAAALAAoAAAABAAAAAAALABcAAAABAAAAAAAMAA0AAAABAAAAAAAOAA8AAAABAAAAAAAPAA8AAAABAAAAAAAQAAcAAAABAAAAAAAQAA8AAAABAAAAAAAQABcAAAABAAAAAAARAAcAAAABAAAAAAARAA8AAAABAAAAAAARABcAAAABAAAAAAASAAcAAAABAAAAAAASAA8AAAABAAAAAAASABcAAAABAAAAAAATABcAAAABAAAAAAAUABEAAAABAAAAAAAUABcAAAABAAAAAAAVAA0AAAABAAAAAAAWAA0AAAABAAAAAAAXAAcAAAABAAAAAAAXAA0AAAABAAAAAAAYAA0AAAABAAAAAAAZAA0AAAABAAAAAAAZABcAAAABAAAAAAAaAA0AAAABAAAAAAAbAA0AAAABAAAAAAAcAAcAAAABAAAAAAAcAA0AAAABAAAAAAAdABYAAAABAAAAAAAeABYAAAABAAAAAAAfAA8AAAABAAAAAAAfABYAAAABAAAAAAAgAAcAAAABAAAAAAAgAA8AAAABAAAAAAAgABYAAAABAAAAAAAhAAcAAAABAAAAAAAhAA8AAAABAAAAAAAhABYAAAABAAAAAAAiAAcAAAABAAAAAAAiAA8AAAABAAAAAAAjAAcAAAABAAAAAAAjAA8AAAABAAAAAAAkAAcAAAABAAAAAAAkAA8AAAABAAAAAAAlAAcAAAABAAAAAAAlABMAAAABAAAAAAAmAAcAAAABAAAAAAAnAAcAAAABAAAAAAAnABEAAAABAAAAAAAoAAcAAAABAAAAAAAoABEAAAABAAAAAAApABEAAAABAAAAAAAqABEAAAABAAAAAAArABEAAAABAAAAAAAsABEAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_w1qb0")
 
-[node name="PlatformPlayer" parent="." unique_id=1876345749 instance=ExtResource("2_5vjwt")]
-position = Vector2(105, 373)
+[node name="PlatformPlayer" parent="SubViewportContainer/SubViewport" unique_id=1876345749 groups=["platformer_player"] instance=ExtResource("2_5vjwt")]
+position = Vector2(48, 42)
+
+[node name="DeathVoid" type="Area2D" parent="SubViewportContainer/SubViewport" unique_id=673910587]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/DeathVoid" unique_id=429639285]
+position = Vector2(401, 739)
+shape = SubResource("RectangleShape2D_5vjwt")
+
+[node name="RespawnPoint" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=262095718]
+position = Vector2(144, 321)
+
+[node name="Coin" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport" unique_id=960767414]
+position = Vector2(621, 101)
+sprite_frames = SubResource("SpriteFrames_443q5")
+autoplay = "default"
+frame_progress = 0.47815165
+
+[node name="WinArea" type="Area2D" parent="SubViewportContainer/SubViewport" unique_id=969899392]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/WinArea" unique_id=416833556]
+position = Vector2(621.125, 101)
+shape = SubResource("RectangleShape2D_g7gp6")
+
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/DeathVoid" to="." method="_on_death_void_body_entered"]
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/WinArea" to="." method="_on_win_area_body_entered"]
