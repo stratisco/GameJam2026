@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cpr78o6pw7v2m"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_2o210"]
+
+[node name="ComputerObject" type="Node2D" unique_id=650850704]
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_2o210")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1582501574]

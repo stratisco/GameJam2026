@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dwcwaornvynca"]
 
-[ext_resource type="PackedScene" uid="uid://btl7h5wq561pd" path="res://scenes/game_scene.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://btl7h5wq561pd" path="res://main/game_scene.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://cas6i70xqrfvb" path="res://player/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://scenes/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://bv7ljjknwbx4k" path="res://scenes/tv_thing/computer.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://main/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bv7ljjknwbx4k" path="res://main/tv_thing/computer.tscn" id="3_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ghmfpfkebbi7" path="res://creditCard/creditCardGUI.tscn" id="4_jyhfs"]
 
 [node name="Node2D" type="Node2D" unique_id=2065037755]
