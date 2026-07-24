@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c68kyx85horib"]
+
+[ext_resource type="Script" uid="uid://buitihar6fubc" path="res://interaction/interaction_manager.gd" id="1_spka6"]
+
+[node name="InteractionManager" type="Node2D" unique_id=481949637]
+script = ExtResource("1_spka6")
+
+[node name="Label" type="Label" parent="." unique_id=1950629424]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "[E]"
+horizontal_alignment = 1
+vertical_alignment = 1
