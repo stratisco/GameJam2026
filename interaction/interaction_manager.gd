@@ -1,15 +1,12 @@
 extends Node2D
 
-
 @onready var player = get_tree().get_first_node_in_group("playerGroup")
 @onready var label = $Label
 
 
 const baseText = "[E]"
 
-
 var activeAreas = []
-
 
 
 var canInteract = true
@@ -24,7 +21,7 @@ func unregisterArea(area: InteractionArea):
 		activeAreas.remove_at(index)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if activeAreas.size() > 0 && canInteract:
 		activeAreas.sort_custom(_sortByDistanceToPlayer)
 		#label.text = baseText + activeAreas[0].actionName #set label text here
@@ -37,17 +34,20 @@ func _process(delta: float) -> void:
 		
 		
 func _sortByDistanceToPlayer(area1, area2):
-	var area1ToPlayer = player.global_position.distance.distance_to(area1.global_position)
-	var area2ToPlayer = player.global_position.distance.distance_to(area2.global_position)
+	var area1ToPlayer = player.global_position.distance_to(area1.global_position)
+	var area2ToPlayer = player.global_position.distance_to(area2.global_position)
 	return area1ToPlayer < area2ToPlayer
 		
 
 
 
-func _input(event):
-	if event.is_action_pressed("interact") && canInteract:
+func _unhandled_input(event):
+	if event.is_action_pressed("interact") && canInteract && globalVars.currentGUI == null:
+		get_viewport().set_input_as_handled()
 		if activeAreas.size() != 0:
 			canInteract = false
 			label.hide()
 			
 			await activeAreas[0].interact.call()
+			
+			canInteract = true
