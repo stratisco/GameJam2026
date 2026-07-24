@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://qppiffd35js0"]
+
+[ext_resource type="Texture2D" uid="uid://dw18jt4j5y4en" path="res://platformer/spikes_tileset.png" id="1_mar8u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1iqtd"]
+atlas = ExtResource("1_mar8u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vj71"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1iqtd")
+}],
+"loop": true,
+"name": &"big",
+"speed": 5.0
+}]
+
+[node name="Spike" type="Area2D" unique_id=29566870]
+collision_layer = 0
+collision_mask = 512
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1861983859]
+position = Vector2(0.5, 0)
+sprite_frames = SubResource("SpriteFrames_5vj71")
+animation = &"big"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1384515090]
+polygon = PackedVector2Array(4, 8, -4, 8, 0, -3)
