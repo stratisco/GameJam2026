@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://main/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bv7ljjknwbx4k" path="res://main/tv_thing/computer.tscn" id="3_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ghmfpfkebbi7" path="res://creditCard/creditCardGUI.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_4dugh"]
 
 [node name="Node2D" type="Node2D" unique_id=2065037755]
 
@@ -17,14 +18,16 @@
 position = Vector2(62, 385)
 
 [node name="Computer" parent="AffectedByShadow" unique_id=1863644666 instance=ExtResource("3_tefeu")]
-position = Vector2(2112, 1168)
+position = Vector2(-51, 1129)
 
 [node name="WeirdPuzzleThing" parent="AffectedByShadow" unique_id=1249777939 instance=ExtResource("3_tbgi4")]
-position = Vector2(2063, 187)
+position = Vector2(1744, 271)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
-visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
+
+[node name="GameConsoleThing" parent="AffectedByShadow" unique_id=189404725 instance=ExtResource("5_4dugh")]
+position = Vector2(2112, 1237)
 
 [node name="NoShadow" type="CanvasLayer" parent="." unique_id=381471495]
 follow_viewport_enabled = true
