@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ghmfpfkebbi7"]
+
+[ext_resource type="Texture2D" uid="uid://0lel48xvtte3" path="res://assets/creditcard.png" id="1_45h6g"]
+
+[node name="Node2D" type="Node2D" unique_id=721812234]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=965178421]
+texture = ExtResource("1_45h6g")
