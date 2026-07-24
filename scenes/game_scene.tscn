@@ -13,6 +13,8 @@ texture = ExtResource("1_lkrhn")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bw6k5")
 
+[sub_resource type="TileSet" id="TileSet_bw6k5"]
+
 [node name="GameMap" type="Node2D" unique_id=965882172]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1303615612]
@@ -29,3 +31,4 @@ tile_set = SubResource("TileSet_y3j0m")
 
 [node name="Props" type="TileMapLayer" parent="." unique_id=722253372]
 scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_bw6k5")
