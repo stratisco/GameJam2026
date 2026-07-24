@@ -5,12 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://scenes/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bv7ljjknwbx4k" path="res://scenes/tv_thing/computer.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://ghmfpfkebbi7" path="res://creditCard/creditCardGUI.tscn" id="4_jyhfs"]
 
 [node name="Node2D" type="Node2D" unique_id=2065037755]
 
 [node name="AffectedByShadow" type="Node2D" parent="." unique_id=779665360]
 
 [node name="GameMap" parent="AffectedByShadow" unique_id=965882172 instance=ExtResource("1_0wfyh")]
+[node name="Player" parent="." unique_id=1171151227 instance=ExtResource("2_sugp2")]
+unique_name_in_owner = true
+position = Vector2(993, 669)
 
 [node name="CreditCard" parent="AffectedByShadow" unique_id=948972031 instance=ExtResource("3_sugp2")]
 position = Vector2(62, 385)
@@ -32,3 +36,7 @@ position = Vector2(1020, 691)
 
 [node name="Camera2D" type="Camera2D" parent="NoShadow/Player" unique_id=1927055518]
 position_smoothing_enabled = true
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888214023]
+unique_name_in_owner = true
+
+[node name="CreditCardGUI" parent="CanvasLayer" unique_id=721812234 instance=ExtResource("4_jyhfs")]

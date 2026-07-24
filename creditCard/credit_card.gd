@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var interactionArea: InteractionArea = $InteractionArea
 @onready var sprite = $Sprite2D
-
+@onready var gui_window = %CanvasLayer/CreditCardGUI
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,4 +11,5 @@ func _ready() -> void:
 
 
 func on_interact():
-	pass # open creditcard
+	globalVars.currentGUI = gui_window;
+	gui_window.visible = true
