@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ghmfpfkebbi7"]
+
+[ext_resource type="Texture2D" uid="uid://0lel48xvtte3" path="res://assets/creditcard.png" id="1_ubhsn"]
+[ext_resource type="Script" uid="uid://dve8p31lljtrt" path="res://creditCard/credit_card_gui.gd" id="1_xi26r"]
+
+[node name="CreditCardGUI" type="Node2D" unique_id=721812234]
+visible = false
+script = ExtResource("1_xi26r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=965178421]
+position = Vector2(1014, 529)
+scale = Vector2(49, 49)
+texture = ExtResource("1_ubhsn")
+
+[node name="Panel" type="Panel" parent="." unique_id=620862491]
+visible = false
+offset_left = -48.0
+offset_top = -20.0
+offset_right = 2011.0
+offset_bottom = 1131.0
