@@ -20,7 +20,10 @@ Example: If the button for collumn 1 is pressed the 2nd, 3rd and 5th bulb in col
 
 ## Docs
 	Collision layer 1 is the walls and objects player collision layer
+	Collision layer 10 is the ground in platfrmer game
 
+## Credit
+Platformer Character: https://kevins-moms-house.itch.io/camelot *not needed but apprecheated or however you spell it*
 
 ## Sketch
 

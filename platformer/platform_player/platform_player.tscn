@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://pnbktka7aoag"]
+
+[ext_resource type="Texture2D" uid="uid://c178g4nfkmbe6" path="res://platformer/platform_player/lancelot.png" id="1_68vxm"]
+[ext_resource type="Script" uid="uid://b81aeg81ms7fi" path="res://platformer/platform_player/platform_player.gd" id="1_ulyux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulyux"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gk0f"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uw2j"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj1mb"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vh3w"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3ohm"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62ea6"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw71e"]
+atlas = ExtResource("1_68vxm")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5qae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulyux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gk0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uw2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj1mb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vh3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3ohm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62ea6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw71e")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 11.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j84mw"]
+size = Vector2(10, 5)
+
+[node name="PlatformPlayer" type="CharacterBody2D" unique_id=1876345749]
+collision_layer = 512
+collision_mask = 512
+script = ExtResource("1_ulyux")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=248244216]
+sprite_frames = SubResource("SpriteFrames_e5qae")
+animation = &"walk"
+autoplay = "idle"
+frame_progress = 0.82508594
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=131909474]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_j84mw")

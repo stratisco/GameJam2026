@@ -1,0 +1,32 @@
+[gd_scene format=4 uid="uid://c6ksqajr1ng7"]
+
+[ext_resource type="Texture2D" uid="uid://dbbaoj20y6pbk" path="res://platformer/platform_tilest.png" id="1_fvjyy"]
+[ext_resource type="PackedScene" uid="uid://pnbktka7aoag" path="res://platformer/platform_player/platform_player.tscn" id="2_5vjwt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vjwt"]
+texture = ExtResource("1_fvjyy")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+
+[sub_resource type="TileSet" id="TileSet_w1qb0"]
+physics_layer_0/collision_layer = 512
+physics_layer_0/collision_mask = 512
+sources/0 = SubResource("TileSetAtlasSource_5vjwt")
+
+[node name="Platformer" type="Node2D" unique_id=1342216673]
+
+[node name="Background" type="ColorRect" parent="." unique_id=80163658]
+offset_right = 800.0
+offset_bottom = 500.0
+color = Color(0.22352941, 0.12156863, 0.25882354, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=402883951]
+tile_map_data = PackedByteArray("AAAFABkAAAABAAAAAAAGABkAAAABAAAAAAAHABkAAAABAAAAAAAIABkAAAABAAAAAAAJABkAAAABAAAAAAAKABkAAAABAAAAAAAPABkAAAABAAAAAAAQABkAAAABAAAAAAARABkAAAABAAAAAAASABkAAAABAAAAAAATABkAAAABAAAAAAAYABkAAAABAAAAAAAcABgAAAABAAAAAAAdABgAAAABAAAAAAAeABgAAAABAAAAAAAfABgAAAABAAAAAAAgABgAAAABAAAAAAAnABUAAAABAAAAAAAmABUAAAABAAAAAAAlABUAAAABAAAAAAAkABUAAAABAAAAAAAmABMAAAABAAAAAAAnABMAAAABAAAAAAAoABMAAAABAAAAAAApABMAAAABAAAAAAAqABMAAAABAAAAAAArABMAAAABAAAAAAAjABEAAAABAAAAAAAiABEAAAABAAAAAAAhABEAAAABAAAAAAAgABEAAAABAAAAAAAfABEAAAABAAAAAAAeABEAAAABAAAAAAAbAA8AAAABAAAAAAAaAA8AAAABAAAAAAAZAA8AAAABAAAAAAAYAA8AAAABAAAAAAAXAA8AAAABAAAAAAAWAA8AAAABAAAAAAAVAA8AAAABAAAAAAAUAA8AAAABAAAAAAARABEAAAABAAAAAAAQABEAAAABAAAAAAAPABEAAAABAAAAAAAOABEAAAABAAAAAAANABEAAAABAAAAAAATABMAAAABAAAAAAAFAAwAAAABAAAAAAAGAAwAAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAJAAwAAAABAAAAAAAKAAwAAAABAAAAAAALAA8AAAABAAAAAAA=")
+tile_set = SubResource("TileSet_w1qb0")
+
+[node name="PlatformPlayer" parent="." unique_id=1876345749 instance=ExtResource("2_5vjwt")]
+position = Vector2(105, 373)
