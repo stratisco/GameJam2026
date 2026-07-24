@@ -1,13 +1,17 @@
+@tool
 extends AnimatedSprite2D
 
-var is_on := true
+@export var is_on := true:
+	set(value):
+		is_on = value
+		if is_inside_tree():
+			play("on" if is_on else "off")
 
 func _ready() -> void:
-	set_state(is_on)
+	play("on" if is_on else "off")
 
 func set_state(state: bool) -> void:
 	is_on = state
-	play("on" if is_on else "off")
 
 func toggle() -> void:
-	set_state(not is_on)
+	is_on = !is_on

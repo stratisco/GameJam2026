@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://rvcy2dqmcqi6"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_twu7x"]
+[ext_resource type="Texture2D" uid="uid://ccy0kvghglmve" path="res://assets/weird_puzzle_board.png" id="2_hrjkm"]
+
+[node name="WeirdPuzzleThing" type="Node2D" unique_id=1249777939]
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_twu7x")]
+action_name = "Play?"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709699163]
+position = Vector2(0, -4)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_hrjkm")

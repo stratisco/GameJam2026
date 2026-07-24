@@ -33,6 +33,17 @@ const COL_BUTTON_MASKS := [
 var bulbs: Array[Node] = []
 var buttons: Array[Node] = []
 
+
+signal puzzle_solved_WIN
+
+func _check_win() -> void:
+	for b in bulbs:
+		if not b.is_on:
+			return
+	puzzle_solved_WIN.emit()
+	print('won???')
+
+
 func _ready() -> void:
 	# get bulb and button nodes into arrays
 	bulbs = bulbs_container.get_children()
@@ -75,9 +86,11 @@ func _xor_row(row: int, mask: Array) -> void:
 		if mask[col] == 1:
 			var i := row * GRID_WIDTH + col
 			bulbs[i].toggle()
+	_check_win()
 
 func _xor_column(col: int, mask: Array) -> void:
 	for row in GRID_HEIGHT:
 		if mask[row] == 1:
 			var i := row * GRID_WIDTH + col
 			bulbs[i].toggle()
+	_check_win()
