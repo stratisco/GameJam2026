@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bv7ljjknwbx4k"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_01aoi"]
+[ext_resource type="Texture2D" uid="uid://dg04jp1ul8wjx" path="res://assets/tv_thing_tile.png" id="2_6eg6q"]
+
+[node name="Computer" type="Node2D" unique_id=1863644666]
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_01aoi")]
+action_name = "Play?"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505072800]
+scale = Vector2(2.875, 2.8749998)
+texture = ExtResource("2_6eg6q")

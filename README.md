@@ -13,6 +13,8 @@ The buttons however do not affect every bulb in their row/collumn and instead wi
 
 Example: If the button for collumn 1 is pressed the 2nd, 3rd and 5th bulb in collumn 1 will flip their state.
 
+Current solution is button squence `3, 7, 12, 1, 9, 4`
+
 *This puzzle UI can be ran by 'instantiating' the `res://weirdPuzzle/weirdBoard.tscn` to another scene*
 
 ### Platformer room
