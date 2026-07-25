@@ -42,7 +42,6 @@ func _on_input_event(_viewport, event, _shape_i):
 			_mouse_down = true
 			play("pressed")
 			button_down.emit()
-
 			
 		else:
 			button_up.emit()
