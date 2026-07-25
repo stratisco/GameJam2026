@@ -5,11 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cas6i70xqrfvb" path="res://player/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://main/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://ghmfpfkebbi7" path="res://creditCard/creditCardGUI.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cpr78o6pw7v2m" path="res://computer/computerObject.tscn" id="5_4dugh"]
 [ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
 [ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="6_grrlh"]
-[ext_resource type="PackedScene" uid="uid://mh0q1u8tec1k" path="res://computer/Terminal.tscn" id="8_67ri8"]
 [ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i4oc"]
@@ -83,11 +81,6 @@ position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888214023]
 unique_name_in_owner = true
-
-[node name="CreditCardGUI" parent="CanvasLayer" unique_id=721812234 instance=ExtResource("4_jyhfs")]
-
-[node name="Terminal" parent="CanvasLayer" unique_id=927919347 instance=ExtResource("8_67ri8")]
-visible = false
 
 [node name="TimerGui" type="CanvasLayer" parent="." unique_id=1384267065]
 

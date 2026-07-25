@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bnhirs7h1fbv4"]
+
+[ext_resource type="Script" uid="uid://bpxpatt8k0wks" path="res://weirdPuzzle/weird_puzzle_scene.gd" id="1_2juhm"]
+[ext_resource type="PackedScene" uid="uid://qq7f556h4vdj" path="res://weirdPuzzle/weirdBoard.tscn" id="2_j1c6v"]
+
+[node name="WeirdPuzzleScene" type="Node2D" unique_id=2079254962]
+script = ExtResource("1_2juhm")
+
+[node name="WeirdPuzzle" parent="." unique_id=814570385 instance=ExtResource("2_j1c6v")]
+position = Vector2(646, 296)
+scale = Vector2(4, 4)

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var interactionArea: InteractionArea = $InteractionArea
-@onready var gui_window = %CanvasLayer/Terminal
+const GUI_SCENE = preload("res://computer/Terminal.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +10,8 @@ func _ready() -> void:
 
 
 func on_interact():
-	globalVars.currentGUI = gui_window;
-	gui_window.visible = true
-	gui_window.onEnter()
+	var scene = GUI_SCENE.instantiate()
+	%CanvasLayer.add_child(scene)
+	globalVars.currentGUI = scene;
+	scene.onEnter()
+	

@@ -12,17 +12,18 @@ var _mouse_down := false
 @onready var area_2d: Area2D = $Area2D
 
 func _ready():
-	
+	print("ready")
 	area_2d.mouse_entered.connect(_on_mouse_entered)
 	area_2d.mouse_exited.connect(_on_mouse_exited)
 	area_2d.input_event.connect(_on_input_event)
+	
 
 
 func _on_mouse_entered():
 	_mouse_inside = true
 	play("hover")
 	hovered.emit()
-
+	
 
 func _on_mouse_exited():
 	_mouse_inside = false
@@ -30,8 +31,13 @@ func _on_mouse_exited():
 	play("default")
 	unhovered.emit()
 
+func _input(event):
+	if event is InputEventMouseButton:
+		print("Mouse:", event.position)
+
 
 func _on_input_event(_viewport, event, _shape_i):
+	print("clicked")
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			_mouse_down = true

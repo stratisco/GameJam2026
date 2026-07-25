@@ -1,8 +1,7 @@
 extends Node2D
 
 @onready var interactionArea: InteractionArea = $InteractionArea
-const GUI_SCENE = preload("res://creditCard/creditCardGUI.tscn")
-
+const GUI_SCENE = preload("res://weirdPuzzle/WeirdPuzzleScene.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

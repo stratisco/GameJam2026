@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bapsi4nde0tgw" path="res://assets/bigCreditCard.png" id="2_xi26r"]
 
 [node name="CreditCardGUI" type="Node2D" unique_id=721812234]
-visible = false
 script = ExtResource("1_xi26r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=965178421]
