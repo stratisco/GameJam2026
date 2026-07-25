@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="GameJam"
+config/name="DontExplode"
+config/description="Game Jam 2026 entry *Count-Down*"
 run/main_scene="uid://duh1073dnd8l5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://dcgkpkav5qr8p"
