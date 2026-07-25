@@ -99,6 +99,6 @@ func updateText():
 	
 	
 func exit():
-	globalVars.currentGUI.visible = false
 	globalVars.currentGUI = null;
 	lineEdit.release_focus()
+	queue_free()
