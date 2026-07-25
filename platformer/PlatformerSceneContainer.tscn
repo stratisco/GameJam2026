@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bjta2ufwm6q3a"]
+
+[ext_resource type="Script" uid="uid://3fuq6ddnffxh" path="res://platformer/platformer_scene_container.gd" id="1_ongcl"]
+[ext_resource type="PackedScene" uid="uid://c6ksqajr1ng7" path="res://platformer/platformer.tscn" id="2_07ahg"]
+
+[node name="PlatformerSceneContainer" type="Node2D" unique_id=1988113962]
+script = ExtResource("1_ongcl")
+
+[node name="Platformer" parent="." unique_id=1342216673 instance=ExtResource("2_07ahg")]
+position = Vector2(417, 193.00003)
+scale = Vector2(1.4, 1.4)

@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://oyj82ht3nx8k"]
 
+[ext_resource type="Script" uid="uid://oiqcbovgxplj" path="res://main/platformer_game_console/game_console_thing.gd" id="1_aac6e"]
 [ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_evb2r"]
 [ext_resource type="Texture2D" uid="uid://bbeieyph1ao3i" path="res://assets/game_console_tile_icon.png" id="2_aac6e"]
 
 [node name="GameConsoleThing" type="Node2D" unique_id=189404725]
+script = ExtResource("1_aac6e")
 metadata/_edit_group_ = true
 
 [node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_evb2r")]
