@@ -9,5 +9,5 @@
 action_name = "Play?"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505072800]
-scale = Vector2(2.875, 2.8749998)
+scale = Vector2(3, 2.9999998)
 texture = ExtResource("2_6eg6q")
