@@ -1,4 +1,5 @@
-# Game Jam 2026 **COUNT DOWN!!!!!**
+# Dont Explode
+*Game Jam entry 2026*
 
 ## Rooms
 
@@ -30,8 +31,9 @@ Its very simple; you just get to the coin and then you win ^_^
 	Collision layer 10 is the ground in platfrmer game
 
 ## Credit
-Platformer Character: https://kevins-moms-house.itch.io/camelot *not needed but apprecheated or however you spell it*
+Platformer Character: https://kevins-moms-house.itch.io/camelot
 Platformer Coin: https://totuslotus.itch.io/pixel-coins?download
+Font: https://fonts.google.com/specimen/Geo?preview.script=Latn
 
 
 ## Sketch

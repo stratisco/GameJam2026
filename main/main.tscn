@@ -22,10 +22,9 @@ position = Vector2(62, 385)
 position = Vector2(2109, 1129)
 
 [node name="WeirdPuzzleThing" parent="AffectedByShadow" unique_id=1249777939 instance=ExtResource("3_tbgi4")]
-position = Vector2(2063, 187)
+position = Vector2(1744, 271)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
-visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
 
 [node name="ComputerObject" parent="AffectedByShadow" unique_id=650850704 instance=ExtResource("5_4dugh")]
