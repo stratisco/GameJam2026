@@ -1,13 +1,47 @@
 [gd_scene format=3 uid="uid://dwcwaornvynca"]
 
 [ext_resource type="PackedScene" uid="uid://btl7h5wq561pd" path="res://main/game_scene.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://b32a43asb4hle" path="res://main/main_script.gd" id="1_bsumw"]
 [ext_resource type="PackedScene" uid="uid://cas6i70xqrfvb" path="res://player/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://main/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://cpr78o6pw7v2m" path="res://computer/computerObject.tscn" id="5_4dugh"]
 [ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
+[ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="6_grrlh"]
+[ext_resource type="PackedScene" uid="uid://mh0q1u8tec1k" path="res://computer/Terminal.tscn" id="8_67ri8"]
+[ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
 
-[node name="Node2D" type="Node2D" unique_id=2065037755]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i4oc"]
+atlas = ExtResource("6_grrlh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsumw"]
+atlas = ExtResource("6_grrlh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwcvl"]
+atlas = ExtResource("6_grrlh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_na0o7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i4oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsumw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwcvl")
+}],
+"loop": true,
+"name": &"fuse",
+"speed": 2.0
+}]
+
+[node name="Main" type="Node2D" unique_id=2065037755]
+script = ExtResource("1_bsumw")
 
 [node name="AffectedByShadow" type="Node2D" parent="." unique_id=779665360]
 
@@ -22,11 +56,19 @@ position = Vector2(1744, 271)
 [node name="GameConsoleThing" parent="AffectedByShadow" unique_id=189404725 instance=ExtResource("5_67ri8")]
 position = Vector2(2103, 1095)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
-color = Color(0.07683582, 0.07683582, 0.07683582, 1)
-
 [node name="ComputerObject" parent="AffectedByShadow" unique_id=650850704 instance=ExtResource("5_4dugh")]
 position = Vector2(652, 509)
+
+[node name="Bomb" type="AnimatedSprite2D" parent="AffectedByShadow" unique_id=1433976809]
+position = Vector2(1038.0001, 721)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_na0o7")
+animation = &"fuse"
+autoplay = "fuse"
+frame_progress = 0.8309086
+
+[node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
+color = Color(0.07683582, 0.07683582, 0.07683582, 1)
 
 [node name="NoShadow" type="CanvasLayer" parent="." unique_id=381471495]
 follow_viewport_enabled = true
@@ -40,3 +82,26 @@ position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888214023]
 unique_name_in_owner = true
+
+[node name="CreditCardGUI" parent="CanvasLayer" unique_id=721812234 instance=ExtResource("4_jyhfs")]
+
+[node name="Terminal" parent="CanvasLayer" unique_id=927919347 instance=ExtResource("8_67ri8")]
+visible = false
+
+[node name="TimerGui" type="CanvasLayer" parent="." unique_id=1384267065]
+
+[node name="LevelTimer" type="Timer" parent="TimerGui" unique_id=1843765566]
+wait_time = 120.0
+one_shot = true
+autostart = true
+script = ExtResource("10_0i4oc")
+
+[node name="TimerLabel" type="Label" parent="TimerGui" unique_id=1846471918]
+offset_left = 33.0
+offset_top = 25.0
+offset_right = 532.0
+offset_bottom = 292.0
+theme_override_font_sizes/font_size = 60
+text = "0:00"
+
+[connection signal="timeout" from="TimerGui/LevelTimer" to="." method="_on_level_timer_timeout"]
