@@ -66,7 +66,7 @@ offset_top = 710.0
 offset_right = 1150.0
 offset_bottom = 833.0
 theme_override_font_sizes/font_size = 60
-text = "Try Again"
+text = "Have Another Go?"
 
 [node name="Succeed" type="Control" parent="." unique_id=716000827]
 anchors_preset = 0
