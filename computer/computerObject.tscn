@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cpr78o6pw7v2m"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_m7yhb"]
+[ext_resource type="Script" uid="uid://bqnpirgsnjf4o" path="res://computer/computer_object.gd" id="1_ubym4"]
+[ext_resource type="Texture2D" uid="uid://dg04jp1ul8wjx" path="res://assets/computer.png" id="2_xcml3"]
+
+[node name="ComputerObject" type="Node2D" unique_id=650850704]
+script = ExtResource("1_ubym4")
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_m7yhb")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1582501574]
+scale = Vector2(3.125, 3.125)
+texture = ExtResource("2_xcml3")

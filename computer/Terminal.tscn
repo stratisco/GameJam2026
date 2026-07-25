@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://mh0q1u8tec1k"]
+
+[ext_resource type="Script" uid="uid://bd86lxet8brnd" path="res://computer/terminal.gd" id="1_1sydk"]
+
+[node name="Terminal" type="Node2D" unique_id=927919347]
+z_as_relative = false
+script = ExtResource("1_1sydk")
+
+[node name="ComputerBackgroundImage" type="TextureRect" parent="." unique_id=1760541449]
+offset_left = 301.0
+offset_top = 191.0
+offset_right = 1752.0
+offset_bottom = 853.0
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1314140542]
+offset_left = 265.0
+offset_top = 885.0
+offset_right = 1064.0
+offset_bottom = 1003.0
+theme_override_font_sizes/font_size = 20
+keep_editing_on_text_submit = true
+selecting_enabled = false
+
+[node name="Label" type="Label" parent="." unique_id=2078455564]
+offset_left = 85.0
+offset_top = 69.0
+offset_right = 1856.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 24
+text = ">"
