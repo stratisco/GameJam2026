@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://cas6i70xqrfvb" path="res://player/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://x0v4oil1m3bu" path="res://creditCard/creditCard.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://rvcy2dqmcqi6" path="res://main/weird_puzzle_thing/weird_puzzle_thing.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://bv7ljjknwbx4k" path="res://main/tv_thing/gameConsoleObject.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://ghmfpfkebbi7" path="res://creditCard/creditCardGUI.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cpr78o6pw7v2m" path="res://computer/computerObject.tscn" id="5_4dugh"]
+[ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
+[ext_resource type="PackedScene" uid="uid://mh0q1u8tec1k" path="res://computer/Terminal.tscn" id="8_67ri8"]
 
 [node name="Node2D" type="Node2D" unique_id=2065037755]
 
@@ -16,11 +18,11 @@
 [node name="CreditCard" parent="AffectedByShadow" unique_id=948972031 instance=ExtResource("3_sugp2")]
 position = Vector2(62, 385)
 
-[node name="GameConsole" parent="AffectedByShadow" unique_id=1863644666 instance=ExtResource("3_tefeu")]
-position = Vector2(2109, 1129)
-
 [node name="WeirdPuzzleThing" parent="AffectedByShadow" unique_id=1249777939 instance=ExtResource("3_tbgi4")]
 position = Vector2(1744, 271)
+
+[node name="GameConsoleThing" parent="AffectedByShadow" unique_id=189404725 instance=ExtResource("5_67ri8")]
+position = Vector2(2103, 1095)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
@@ -40,3 +42,8 @@ position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888214023]
 unique_name_in_owner = true
+
+[node name="CreditCardGUI" parent="CanvasLayer" unique_id=721812234 instance=ExtResource("4_jyhfs")]
+
+[node name="Terminal" parent="CanvasLayer" unique_id=927919347 instance=ExtResource("8_67ri8")]
+visible = false
