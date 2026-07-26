@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c8ga30fiuckvq"]
+
+[ext_resource type="Script" uid="uid://cs7pls1xli0hx" path="res://redHerring/redHerringGui.gd" id="1_u4lhv"]
+[ext_resource type="Texture2D" uid="uid://daqfcjus5auw4" path="res://assets/fishies.png" id="2_3ll3u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctbhn"]
+atlas = ExtResource("2_3ll3u")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xsv48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctbhn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RedHerringGui" type="Node2D" unique_id=721812234]
+script = ExtResource("1_u4lhv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1927741061]
+offset_left = 465.0
+offset_top = 379.0
+offset_right = 1491.0
+offset_bottom = 687.0
+mouse_filter = 2
+color = Color(0.5764706, 0.36862746, 0.36862746, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1548550106]
+offset_left = 569.0
+offset_top = 429.0
+offset_right = 1357.0
+offset_bottom = 572.0
+theme_override_font_sizes/font_size = 50
+text = "This is a red herring
+
+   -------->"
+
+[node name="Panel" type="Panel" parent="." unique_id=620862491]
+visible = false
+offset_left = -48.0
+offset_top = -20.0
+offset_right = 2011.0
+offset_bottom = 1131.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=142781416]
+position = Vector2(1195, 596.00006)
+scale = Vector2(9.203133, 9.203133)
+sprite_frames = SubResource("SpriteFrames_xsv48")

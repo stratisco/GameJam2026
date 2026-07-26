@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cpr78o6pw7v2m" path="res://computer/computerObject.tscn" id="5_4dugh"]
 [ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
 [ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="6_grrlh"]
-[ext_resource type="PackedScene" uid="uid://ckxdiukhj52wk" path="res://main/redHerring/redHerring.tscn" id="7_fwcvl"]
 [ext_resource type="PackedScene" uid="uid://bqs0yjhc8tq5s" path="res://fusebox/fusebox.tscn" id="8_0i4oc"]
 [ext_resource type="PackedScene" uid="uid://dvpbt2yd3sl8u" path="res://main/Cords/PowerCord.tscn" id="9_bsumw"]
 [ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
+[ext_resource type="PackedScene" uid="uid://xmeej7f6p44" path="res://redHerring/redHerring.tscn" id="10_fwcvl"]
 
 [sub_resource type="Curve2D" id="Curve2D_fwcvl"]
 _data = {
@@ -109,9 +109,6 @@ z_index = 1
 position = Vector2(1744, 271)
 metadata/_edit_lock_ = true
 
-[node name="RedHerring" parent="AffectedByShadow" unique_id=1893217330 instance=ExtResource("7_fwcvl")]
-position = Vector2(-37, 1323)
-
 [node name="GameConsoleThing" parent="AffectedByShadow" unique_id=189404725 instance=ExtResource("5_67ri8")]
 z_index = 1
 position = Vector2(2103, 1095)
@@ -141,6 +138,9 @@ metadata/_edit_lock_ = true
 visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
 metadata/_edit_lock_ = true
+
+[node name="RedHerring" parent="AffectedByShadow" unique_id=499672677 instance=ExtResource("10_fwcvl")]
+position = Vector2(-26, 1308)
 
 [node name="NoShadow" type="CanvasLayer" parent="." unique_id=381471495]
 follow_viewport_enabled = true
