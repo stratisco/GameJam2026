@@ -12,7 +12,15 @@ func _process(_delta: float) -> void:
 	progress_bar.value = timer.wait_time - timer.time_left
 
 
-func _on_timer_timeout() -> void:
+func proceed():
 	await Fader.full_fade()
 	# res://main/main.tscn
 	get_tree().change_scene_to_file("uid://dwcwaornvynca")
+
+
+func _on_timer_timeout() -> void:
+	proceed()
+
+
+func _on_skip_button_pressed() -> void:
+	proceed()
