@@ -1,11 +1,18 @@
 extends Control
 
-## time to read before it starts the game
-@export var readTime = 10.0
+
+@onready var timer: Timer = $Timer
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 func _ready() -> void:
-	await get_tree().create_timer(readTime).timeout # Wait for 2 seconds
+	progress_bar.max_value = timer.wait_time
+	progress_bar.value = timer.wait_time
 
+func _process(_delta: float) -> void:
+	progress_bar.value = timer.wait_time - timer.time_left
+
+
+func _on_timer_timeout() -> void:
 	await Fader.full_fade()
 	# res://main/main.tscn
 	get_tree().change_scene_to_file("uid://dwcwaornvynca")
