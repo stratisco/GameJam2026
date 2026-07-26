@@ -17,10 +17,10 @@ color = Color(0.27, 0.27, 0.27, 1)
 
 [node name="Title" type="Label" parent="." unique_id=895667006]
 layout_mode = 0
-offset_left = 549.0
-offset_top = 84.0
-offset_right = 1359.0
-offset_bottom = 192.0
+offset_left = 530.0
+offset_top = 172.0
+offset_right = 1340.0
+offset_bottom = 280.0
 theme_override_font_sizes/font_size = 70
 text = "DONT EXPLODE!!!"
 horizontal_alignment = 1
@@ -28,14 +28,31 @@ vertical_alignment = 1
 
 [node name="PlayButton" type="Button" parent="." unique_id=1913558336]
 layout_mode = 0
-offset_left = 809.0
-offset_top = 281.0
-offset_right = 1051.0
-offset_bottom = 341.0
+offset_left = 686.0
+offset_top = 601.0
+offset_right = 1158.0
+offset_bottom = 750.0
 theme_override_font_sizes/font_size = 50
 text = "Play Game"
 
+[node name="Label" type="Label" parent="." unique_id=863318431]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 834.0
+offset_right = 1142.0
+offset_bottom = 871.0
+text = "Volume Slider"
+
+[node name="VolumeSlider" type="HSlider" parent="." unique_id=314021381]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 861.0
+offset_right = 1205.0
+offset_bottom = 916.0
+value = 70.0
+
 [node name="DeveloperButtons" type="Control" parent="." unique_id=2074044264]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -59,5 +76,7 @@ theme_override_font_sizes/font_size = 50
 text = "Play Xor Puzzle"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="drag_ended" from="VolumeSlider" to="." method="_on_volume_slider_drag_ended"]
+[connection signal="value_changed" from="VolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
 [connection signal="pressed" from="DeveloperButtons/PlatformerButton" to="." method="_on_platformer_button_pressed"]
 [connection signal="pressed" from="DeveloperButtons/XorButton" to="." method="_on_xor_button_pressed"]

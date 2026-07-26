@@ -1,6 +1,12 @@
 # Dont Explode
 *Game Jam entry 2026*
 
+## How To Compile
+1. Install Godot from their website (built on version 4.6)
+2. Clone the repo
+3. Open the project in godot
+4. Run/Edit/Compile the game from there
+
 ## Rooms
 
 ### Weird Puzzle Room
@@ -34,7 +40,7 @@ Its very simple; you just get to the coin and then you win ^_^
 Platformer Character: https://kevins-moms-house.itch.io/camelot
 Platformer Coin: https://totuslotus.itch.io/pixel-coins?download
 Font: https://fonts.google.com/specimen/Geo?preview.script=Latn
-
+anotehr font: https://www.dafont.com/better-vcr.font?l[]=10&text=Welcome+to+DONT+EXPLODE.+please+dont+explode+1234567890
 
 ## Sketch
 

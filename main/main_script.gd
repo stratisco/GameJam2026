@@ -43,6 +43,7 @@ func game_over():
 	# if timer times out the player loses.
 	globalVars.didTheyWin = false
 	
+	MusicManager.get_node('Explosion').play()
 	await player.explode()
 	
 	await Fader.full_fade()

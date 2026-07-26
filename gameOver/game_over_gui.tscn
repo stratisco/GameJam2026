@@ -21,11 +21,11 @@ color = Color(0.27058825, 0.27058825, 0.27058825, 1)
 
 [node name="Attempts" type="Label" parent="." unique_id=66259908]
 layout_mode = 0
-offset_left = 623.0
-offset_top = 194.0
-offset_right = 1195.0
-offset_bottom = 340.0
-theme_override_font_sizes/font_size = 60
+offset_left = 631.0
+offset_top = 204.0
+offset_right = 1216.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 35
 text = "Attempt: 0???"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -36,7 +36,7 @@ offset_left = 622.0
 offset_top = 111.0
 offset_right = 1194.0
 offset_bottom = 257.0
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 70
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -49,11 +49,11 @@ offset_bottom = 40.0
 
 [node name="Msg" type="Label" parent="Fail" unique_id=252372031]
 layout_mode = 0
-offset_left = 607.0
-offset_top = 512.0
-offset_right = 1219.0
-offset_bottom = 674.0
-theme_override_font_sizes/font_size = 50
+offset_left = 387.0
+offset_top = 454.0
+offset_right = 1476.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 30
 text = "You Died 🥺
 BUT you have gained knowledge"
 horizontal_alignment = 1
@@ -61,25 +61,26 @@ vertical_alignment = 1
 
 [node name="TryAgain" type="Button" parent="Fail" unique_id=1310196000]
 layout_mode = 0
-offset_left = 699.0
-offset_top = 710.0
-offset_right = 1150.0
-offset_bottom = 833.0
-theme_override_font_sizes/font_size = 60
+offset_left = 627.0
+offset_top = 713.0
+offset_right = 1237.0
+offset_bottom = 838.0
+theme_override_font_sizes/font_size = 45
 text = "Have Another Go?"
 
 [node name="Succeed" type="Control" parent="." unique_id=716000827]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Msg" type="Label" parent="Succeed" unique_id=1706133270]
 layout_mode = 0
-offset_left = 631.0
-offset_top = 442.0
-offset_right = 1180.0
-offset_bottom = 714.0
-theme_override_font_sizes/font_size = 50
+offset_left = 528.0
+offset_top = 417.0
+offset_right = 1316.0
+offset_bottom = 689.0
+theme_override_font_sizes/font_size = 30
 text = "You Survived 😊
 Thank you for playing"
 horizontal_alignment = 1
@@ -87,11 +88,11 @@ vertical_alignment = 1
 
 [node name="PlayAgain" type="Button" parent="Succeed" unique_id=2062640468]
 layout_mode = 0
-offset_left = 673.0
-offset_top = 719.0
-offset_right = 1124.0
-offset_bottom = 842.0
-theme_override_font_sizes/font_size = 60
+offset_left = 690.0
+offset_top = 724.0
+offset_right = 1159.0
+offset_bottom = 837.0
+theme_override_font_sizes/font_size = 45
 text = "Play Again?"
 
 [connection signal="pressed" from="Fail/TryAgain" to="." method="_on_try_again_button_pressed"]

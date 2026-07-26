@@ -1,14 +1,12 @@
 extends Control
 
 
+@onready var volume_slider: HSlider = $VolumeSlider
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+	_on_music_volume_slider_value_changed(volume_slider.value)
 
 
 func _on_play_button_pressed() -> void:
@@ -26,3 +24,9 @@ func _on_platformer_button_pressed() -> void:
 func _on_xor_button_pressed() -> void:
 	# res://weirdPuzzle/weirdBoard.tscn
 	get_tree().change_scene_to_file("uid://qq7f556h4vdj")
+
+
+
+func _on_music_volume_slider_value_changed(value: float) -> void:
+	var volume_db = linear_to_db(value / 100.0)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), volume_db)
