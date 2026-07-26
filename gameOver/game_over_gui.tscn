@@ -30,7 +30,13 @@ text = "Attempt: 0???"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameOver" type="Label" parent="." unique_id=1231690800]
+[node name="Fail" type="Control" parent="." unique_id=499606063]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOver" type="Label" parent="Fail" unique_id=1231690800]
 layout_mode = 0
 offset_left = 622.0
 offset_top = 111.0
@@ -40,12 +46,6 @@ theme_override_font_sizes/font_size = 70
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Fail" type="Control" parent="." unique_id=499606063]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Msg" type="Label" parent="Fail" unique_id=252372031]
 layout_mode = 0
@@ -73,6 +73,17 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="GameOver" type="Label" parent="Succeed" unique_id=1493637483]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 103.0
+offset_right = 1205.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 70
+text = "You Win!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Msg" type="Label" parent="Succeed" unique_id=1706133270]
 layout_mode = 0

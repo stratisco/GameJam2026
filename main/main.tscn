@@ -140,7 +140,6 @@ frame_progress = 0.8309086
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
-visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
 metadata/_edit_lock_ = true
 
@@ -167,7 +166,7 @@ unique_name_in_owner = true
 [node name="TimerGui" type="CanvasLayer" parent="." unique_id=1384267065]
 
 [node name="LevelTimer" type="Timer" parent="TimerGui" unique_id=1843765566]
-wait_time = 70.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 script = ExtResource("10_0i4oc")
