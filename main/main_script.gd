@@ -2,6 +2,9 @@ extends Node2D
 
 
 @onready var level_timer: Timer = $TimerGui/LevelTimer
+@onready var camera: Camera2D = $NoShadow/Player/Camera2D
+@onready var canvas_modulate: CanvasModulate = $AffectedByShadow/CanvasModulate
+@onready var player: CharacterBody2D = %Player
 
 
 # Called when the node enters the scene tree for the first time.
@@ -40,6 +43,9 @@ func game_over():
 	# if timer times out the player loses.
 	globalVars.didTheyWin = false
 	
+	await player.explode()
+	
+	await Fader.full_fade()
 	# res://gameOver/game_over_gui.tscn
 	get_tree().change_scene_to_file("uid://defjewdbd12y0")
 
@@ -51,5 +57,31 @@ func playerWins():
 	# just to make sure the timer doesnt emit a lose signal
 	level_timer.stop()
 	
+	await Fader.full_fade()
 	# res://gameOver/game_over_gui.tscn
 	get_tree().change_scene_to_file("uid://defjewdbd12y0")
+
+
+
+var shake_time := 0.0
+var shake_amount := 0.0
+
+func shake_camera(amount: float = 5.0) -> void:
+	shake_time = 10.0
+	shake_amount = amount
+
+func _process(delta: float) -> void:
+	if shake_time > 0.0:
+		shake_time -= delta
+		camera.offset = Vector2(randf_range(-shake_amount, shake_amount), randf_range(-shake_amount, shake_amount))
+	else:
+		camera.offset = Vector2.ZERO
+
+
+func _on_level_timer_one_seconds_left() -> void:
+	shake_camera()
+
+
+func _on_level_timer_ten_seconds_left() -> void:
+	var tween := create_tween()
+	tween.tween_property(canvas_modulate, "color:r", 0.5, 10)

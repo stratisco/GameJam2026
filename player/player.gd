@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var PLAYER_SPEED := 350.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var explosion: AnimatedSprite2D = $Explosion
 
 func _physics_process(_delta: float) -> void:
 	var input_vector := Vector2.ZERO
@@ -22,3 +23,14 @@ func _physics_process(_delta: float) -> void:
 		sprite.play("idle")
 
 	move_and_slide()
+
+
+func explode() -> void:
+	explosion.visible = true
+	explosion.play("explode")
+	
+	await get_tree().create_timer(explosion.sprite_frames.get_frame_count("explode") / explosion.sprite_frames.get_animation_speed("explode") / 4.0).timeout
+	#visible = false
+	
+	await explosion.animation_finished
+	explosion.visible = false

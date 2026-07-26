@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://debyukh0dcif6"]
+
+[ext_resource type="Script" uid="uid://dmhhjdc6ei2fn" path="res://effects/fader.gd" id="1_3f8xl"]
+
+[node name="Fader" type="Node2D" unique_id=1819820405]
+z_index = 4096
+script = ExtResource("1_3f8xl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2144179834]
+offset_left = -372.0
+offset_top = -272.0
+offset_right = 2312.0
+offset_bottom = 1443.0
+color = Color(0.017732391, 0.01773239, 0.017732402, 1)

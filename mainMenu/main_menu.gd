@@ -12,8 +12,10 @@ func _process(_delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	# res://main/main.tscn
-	get_tree().change_scene_to_file("uid://dwcwaornvynca")
+	await Fader.full_fade()
+	
+	# res://mainMenu/description.tscn
+	get_tree().change_scene_to_file("uid://bihr7nksyu32c")
 
 
 func _on_platformer_button_pressed() -> void:

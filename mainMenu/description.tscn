@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bihr7nksyu32c"]
+
+[ext_resource type="Script" uid="uid://dgi6m3q00ae3o" path="res://mainMenu/description.gd" id="1_qlweh"]
+
+[node name="Description" type="Control" unique_id=1849886854]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qlweh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=257634285]
+layout_mode = 0
+offset_left = -291.0
+offset_top = -140.0
+offset_right = 2131.0
+offset_bottom = 1238.0
+color = Color(0.27058825, 0.27058825, 0.27058825, 1)
+
+[node name="Label" type="Label" parent="." unique_id=348738557]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 153.0
+offset_right = 1704.0
+offset_bottom = 1005.0
+theme_override_font_sizes/font_size = 50
+text = "Welcome to Dont Explode
+
+The goal of this game is... DONT EXPLODE
+Very simple
+
+It may take a few tries to solve all the puzzles within the time limit but in the end you will successfully disarm the bomb and save yourself (and maybe the world?)
+
+Now get ready 😁😁
+
+"
+autowrap_mode = 2
