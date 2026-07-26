@@ -231,3 +231,10 @@ sprite_frames = SubResource("SpriteFrames_dvdk8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1768809465]
 position = Vector2(1005, 499.5)
 shape = SubResource("RectangleShape2D_8ycno")
+
+[node name="Label" type="Label" parent="." unique_id=985863042]
+offset_left = 861.0
+offset_top = 841.0
+offset_right = 1125.0
+offset_bottom = 968.0
+text = "Wirecutters requrired!"
