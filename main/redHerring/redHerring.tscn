@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ckxdiukhj52wk"]
+
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="1_718ky"]
+[ext_resource type="Texture2D" uid="uid://daqfcjus5auw4" path="res://assets/fishies.png" id="2_o6ca2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5trvn"]
+atlas = ExtResource("2_o6ca2")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckcoe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5trvn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RedHerring" type="Node2D" unique_id=1893217330]
+metadata/_edit_group_ = true
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("1_718ky")]
+action_name = "Fish"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=104457530]
+scale = Vector2(2.625, 2.625)
+sprite_frames = SubResource("SpriteFrames_ckcoe")
+autoplay = "default"

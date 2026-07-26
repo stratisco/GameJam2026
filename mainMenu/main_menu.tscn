@@ -1,6 +1,36 @@
 [gd_scene format=3 uid="uid://duh1073dnd8l5"]
 
 [ext_resource type="Script" uid="uid://daves7u8iujhp" path="res://mainMenu/main_menu.gd" id="1_27owx"]
+[ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="2_phg2d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmjeq"]
+atlas = ExtResource("2_phg2d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osowc"]
+atlas = ExtResource("2_phg2d")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha25l"]
+atlas = ExtResource("2_phg2d")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i514n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmjeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osowc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha25l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="MainMenu" type="Control" unique_id=861669719]
 layout_mode = 3
@@ -14,6 +44,14 @@ offset_top = -91.0
 offset_right = 2066.0
 offset_bottom = 1184.0
 color = Color(0.27, 0.27, 0.27, 1)
+
+[node name="Button" type="Button" parent="." unique_id=966798745]
+layout_mode = 1
+offset_left = 1688.0
+offset_top = 16.0
+offset_right = 1904.0
+offset_bottom = 67.0
+text = "Exit Game"
 
 [node name="Title" type="Label" parent="." unique_id=895667006]
 layout_mode = 0
@@ -75,6 +113,14 @@ offset_bottom = 273.0
 theme_override_font_sizes/font_size = 50
 text = "Play Xor Puzzle"
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1867384351]
+position = Vector2(930.00006, 421.00003)
+scale = Vector2(8.906246, 8.906246)
+sprite_frames = SubResource("SpriteFrames_i514n")
+autoplay = "default"
+frame_progress = 0.1716186
+
+[connection signal="pressed" from="Button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="drag_ended" from="VolumeSlider" to="." method="_on_volume_slider_drag_ended"]
 [connection signal="value_changed" from="VolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
