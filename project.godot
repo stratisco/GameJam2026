@@ -20,6 +20,7 @@ config/icon="uid://dcgkpkav5qr8p"
 
 InteractionManager="*uid://c68kyx85horib"
 globalVars="*uid://cr3ippgh8mobf"
+Fader="*uid://debyukh0dcif6"
 
 [display]
 
