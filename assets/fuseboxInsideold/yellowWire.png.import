@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pg47a37by32o"
-path="res://.godot/imported/limeWire.png-4a9f1c6f95fdb897ea804bd998567b76.ctex"
+uid="uid://cwtu2bftaiox2"
+path="res://.godot/imported/yellowWire.png-fdfd994d49d76f84bdb20b6e891d7125.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/limeWire.png"
-dest_files=["res://.godot/imported/limeWire.png-4a9f1c6f95fdb897ea804bd998567b76.ctex"]
+source_file="res://assets/fuseboxInsideold/yellowWire.png"
+dest_files=["res://.godot/imported/yellowWire.png-fdfd994d49d76f84bdb20b6e891d7125.ctex"]
 
 [params]
 

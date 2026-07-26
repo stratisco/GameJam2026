@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ur1qwta16cp5"
-path="res://.godot/imported/redWire.png-6b232760a665677b3c77272045d70449.ctex"
+uid="uid://8pvqg3mn3y74"
+path="res://.godot/imported/PurpleWireCut.png-9418950e5a5c5e470864ec50a86bba17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/redWire.png"
-dest_files=["res://.godot/imported/redWire.png-6b232760a665677b3c77272045d70449.ctex"]
+source_file="res://assets/fuseboxInside/PurpleWireCut.png"
+dest_files=["res://.godot/imported/PurpleWireCut.png-9418950e5a5c5e470864ec50a86bba17.ctex"]
 
 [params]
 
