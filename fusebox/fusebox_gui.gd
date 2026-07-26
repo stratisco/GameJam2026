@@ -45,6 +45,6 @@ func exit():
 	queue_free()
 
 func _unhandled_input(event):
-	if event.is_action_pressed("interact") && globalVars.currentGUI == self:
+	if event.is_action_pressed("closeGUI") && globalVars.currentGUI == self:
 		get_viewport().set_input_as_handled()
 		exit()
