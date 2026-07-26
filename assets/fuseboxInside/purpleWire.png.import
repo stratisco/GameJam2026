@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3xxev5u7qfmg"
-path="res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"
+path="res://.godot/imported/purpleWire.png-bcc17975c777901b97bac2c7ff794eac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/PurpleWire.png"
-dest_files=["res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"]
+source_file="res://assets/fuseboxInside/purpleWire.png"
+dest_files=["res://.godot/imported/purpleWire.png-bcc17975c777901b97bac2c7ff794eac.ctex"]
 
 [params]
 

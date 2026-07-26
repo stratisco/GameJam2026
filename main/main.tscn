@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dvpbt2yd3sl8u" path="res://main/Cords/PowerCord.tscn" id="9_bsumw"]
 [ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
 [ext_resource type="PackedScene" uid="uid://doouoohrlp8on" path="res://main/package/package.tscn" id="10_fwcvl"]
-[ext_resource type="PackedScene" uid="uid://xmeej7f6p44" path="res://redherring/redHerring.tscn" id="11_na0o7"]
+[ext_resource type="PackedScene" uid="uid://xmeej7f6p44" path="res://redHerring/redHerring.tscn" id="11_na0o7"]
 [ext_resource type="PackedScene" uid="uid://dliepcsc0rdom" path="res://main/book/manual.tscn" id="12_73k8k"]
 [ext_resource type="AudioStream" uid="uid://b48ci4cpjfoaa" path="res://assets/audio/explode_bg_music.mp3" id="15_5xyti"]
 
@@ -179,6 +179,9 @@ offset_right = 532.0
 offset_bottom = 292.0
 theme_override_font_sizes/font_size = 30
 text = "0:00"
+
+[connection signal="one_seconds_left" from="TimerGui/LevelTimer" to="." method="_on_level_timer_one_seconds_left"]
+[connection signal="ten_seconds_left" from="TimerGui/LevelTimer" to="." method="_on_level_timer_ten_seconds_left"]
 
 [node name="ExplodeBgMusic" type="AudioStreamPlayer" parent="." unique_id=210930535]
 stream = ExtResource("15_5xyti")
