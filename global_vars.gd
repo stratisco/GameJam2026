@@ -11,7 +11,7 @@ signal spawnPackage
 
 # should be reset on replay
 var currentGUI = null
-var hasWirecutters := true
+var hasWirecutters := false
 var wirecuttersOrdered := false
 
 
