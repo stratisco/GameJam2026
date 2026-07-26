@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cqlkyr1o7g0na"]
 
-[ext_resource type="AudioStream" uid="uid://dkworbobq1jyy" path="res://assets/audio/background_song.mp3" id="1_kdd74"]
+[ext_resource type="AudioStream" uid="uid://b48ci4cpjfoaa" path="res://assets/audio/explode_bg_music.mp3" id="1_kdikp"]
 [ext_resource type="AudioStream" uid="uid://cx74nh7x814bv" path="res://assets/audio/explosion.mp3" id="2_kdikp"]
 
 [node name="MusicManager" type="Node" unique_id=982629324]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=391956910]
-stream = ExtResource("1_kdd74")
+stream = ExtResource("1_kdikp")
 volume_db = -25.366
-autoplay = true
 
 [node name="Explosion" type="AudioStreamPlayer" parent="." unique_id=1334382809]
 stream = ExtResource("2_kdikp")
