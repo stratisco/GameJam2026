@@ -1,7 +1,8 @@
 extends Node2D
 
 @onready var interactionArea: InteractionArea = $InteractionArea
-const GUI_SCENE = preload("uid://bjta2ufwm6q3a")
+const GUI_SCENE = preload('uid://uonhjkddu046')
+
 
 
 # Called when the node enters the scene tree for the first time.
