@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cpr78o6pw7v2m" path="res://computer/computerObject.tscn" id="5_4dugh"]
 [ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
 [ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="6_grrlh"]
+[ext_resource type="PackedScene" uid="uid://bqs0yjhc8tq5s" path="res://fusebox/fusebox.tscn" id="8_0i4oc"]
 [ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i4oc"]
@@ -67,14 +68,18 @@ autoplay = "fuse"
 frame_progress = 0.8309086
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
+visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
+
+[node name="Fusebox" parent="AffectedByShadow" unique_id=1891370771 instance=ExtResource("8_0i4oc")]
+position = Vector2(1256, 480)
 
 [node name="NoShadow" type="CanvasLayer" parent="." unique_id=381471495]
 follow_viewport_enabled = true
 
 [node name="Player" parent="NoShadow" unique_id=1758529995 instance=ExtResource("2_sugp2")]
 unique_name_in_owner = true
-position = Vector2(1103, 700)
+position = Vector2(1139, 699)
 
 [node name="Camera2D" type="Camera2D" parent="NoShadow/Player" unique_id=1927055518]
 position_smoothing_enabled = true
