@@ -21,6 +21,7 @@ config/icon="uid://dcgkpkav5qr8p"
 InteractionManager="*uid://c68kyx85horib"
 globalVars="*uid://cr3ippgh8mobf"
 Fader="*uid://debyukh0dcif6"
+MusicManager="*uid://cqlkyr1o7g0na"
 
 [display]
 
@@ -30,7 +31,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom_font="uid://da0iexh8h473k"
+theme/custom_font="uid://d32abfmh81vl"
 
 [input]
 
