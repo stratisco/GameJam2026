@@ -24,6 +24,10 @@ func _ready() -> void:
 
 
 func _on_try_again_button_pressed() -> void:
+	globalVars.hasWirecutters = false
+	globalVars.currentGUI = null
+	globalVars.wirecuttersOrdered = false
+	
 	# res://scenes/main.tscn
 	get_tree().change_scene_to_file("uid://dwcwaornvynca")
 
@@ -32,5 +36,4 @@ func _on_play_again_pressed() -> void:
 	globalVars.didTheyWin = false
 	globalVars.totalAttemps = 0
 	
-	# res://scenes/main.tscn
-	get_tree().change_scene_to_file("uid://dwcwaornvynca")
+	_on_try_again_button_pressed()

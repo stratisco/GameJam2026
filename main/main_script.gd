@@ -7,6 +7,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	globalVars.totalAttemps += 1
+	globalVars.game_over_signal.connect(game_over)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,12 +17,19 @@ func _process(_delta: float) -> void:
 	
 # level timer timeout
 func _on_level_timer_timeout() -> void:
+	game_over()
+	
+	
+
+	
+func game_over():
+	print("game over func")
 	# if timer times out the player loses.
 	globalVars.didTheyWin = false
 	
 	# res://gameOver/game_over_gui.tscn
 	get_tree().change_scene_to_file("uid://defjewdbd12y0")
-	
+
 
 # run this function when the player wins and defuses the bomb
 func playerWins():

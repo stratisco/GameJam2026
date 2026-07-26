@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dh1cbi25w6817"]
+
+[ext_resource type="Script" uid="uid://c7ev1lf3sfvqw" path="res://fusebox/fusebox_gui.gd" id="1_jrtwx"]
+[ext_resource type="PackedScene" uid="uid://dahm1ry6bsbvv" path="res://fusebox/wire.tscn" id="2_jrtwx"]
+
+[node name="FuseboxGUI" type="Node2D" unique_id=721812234]
+script = ExtResource("1_jrtwx")
+
+[node name="Panel" type="Panel" parent="." unique_id=620862491]
+visible = false
+offset_left = -48.0
+offset_top = -20.0
+offset_right = 2011.0
+offset_bottom = 1131.0
+
+[node name="Wires" type="Node2D" parent="." unique_id=999722863]
+
+[node name="Wire" parent="Wires" unique_id=39886068 instance=ExtResource("2_jrtwx")]
+position = Vector2(346, 523)
+scale = Vector2(10, 10)
+
+[node name="Wire2" parent="Wires" unique_id=1691543487 instance=ExtResource("2_jrtwx")]
+position = Vector2(519, 536)
+scale = Vector2(10, 10)
+
+[node name="Wire3" parent="Wires" unique_id=1091561241 instance=ExtResource("2_jrtwx")]
+position = Vector2(672, 517.00006)
+scale = Vector2(10, 10)
+
+[node name="Wire4" parent="Wires" unique_id=99630249 instance=ExtResource("2_jrtwx")]
+position = Vector2(800.0001, 537.00006)
+scale = Vector2(10, 10)

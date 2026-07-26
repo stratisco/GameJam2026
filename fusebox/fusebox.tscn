@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bqs0yjhc8tq5s"]
+
+[ext_resource type="Script" uid="uid://t0ysok3gba01" path="res://fusebox/fusebox.gd" id="1_8y8ja"]
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="2_6ltuy"]
+[ext_resource type="Texture2D" uid="uid://r7vl2efysp6j" path="res://assets/fusebox.png" id="3_1hhwk"]
+
+[node name="CreditCard" type="Node2D" unique_id=948972031]
+script = ExtResource("1_8y8ja")
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("2_6ltuy")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=187925729]
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("3_1hhwk")

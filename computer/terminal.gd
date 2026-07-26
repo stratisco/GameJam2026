@@ -9,7 +9,6 @@ var labelText = []
 
 var mode = "normal"
 var itemOrdered
-var wirecuttersOrdered = false
 
 
 func onEnter():
@@ -39,7 +38,7 @@ func parseTextEntry(text):
 					mode = "credit"
 					itemOrdered = "Bomb Difusal Manual"
 				"3":
-					if wirecuttersOrdered:
+					if globalVars.wirecuttersOrdered:
 						labelText.push_front("Out of stock!")
 						mode = "normal"
 					else:
@@ -59,7 +58,8 @@ func parseTextEntry(text):
 			if (text == "12784396"):
 				if itemOrdered == "Wire Cutters":
 					labelText.push_front("Wire Cutters ordered.")
-					wirecuttersOrdered = true
+					globalVars.wirecuttersOrdered = true
+					globalVars.hasWirecutters = true
 				else:
 					labelText.push_front("Insufficient funds. Transaction cancelled.")
 			

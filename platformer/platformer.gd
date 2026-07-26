@@ -13,11 +13,6 @@ func _ready() -> void:
 		area.body_entered.connect(_on_body_entered)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func respawn_player():
 	player.position = respawn_point.position
 
@@ -33,6 +28,6 @@ func _on_body_entered(body):
 		respawn_player()
 
 
-func _on_win_area_body_entered(body: Node2D) -> void:
+func _on_win_area_body_entered(_body: Node2D) -> void:
 	print('player made it to end of platformer')
 	player_reached_end_WIN.emit()
