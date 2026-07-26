@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dcmyldaqocosa"]
+
+[ext_resource type="Texture2D" uid="uid://ch10mmjqs7px0" path="res://assets/book.png" id="1_wjlsm"]
+
+[node name="Manual" type="Node2D" unique_id=1134460353]
+
+[node name="Book" type="Sprite2D" parent="." unique_id=444670795]
+position = Vector2(956, 518.00006)
+scale = Vector2(1.3007813, 1.1279297)
+texture = ExtResource("1_wjlsm")
+
+[node name="Label" type="Label" parent="." unique_id=1006354398]
+offset_left = 537.0
+offset_top = 325.0
+offset_right = 911.0
+offset_bottom = 842.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "How to safely turn off
+
+Required Tools: Wire Cutters
+
+Instructions: cut the correct wires. 
+
+_______________________________
+
+- if there are more than 8 wires, they should all be cut. 
+
+- if a yellow wire is in the top half, it should be cut.
+
+- if there are 2 wires with the same colour, neither should be cut.
+"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=651411103]
+offset_left = 1042.0
+offset_top = 270.0
+offset_right = 1413.0
+offset_bottom = 767.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "
+- the same number of wires in the top and bottom half should be cut.
+
+- if there are an even number of wires, white wires should be cut.
+
+- any orange wires that are above white wires should not be cut.
+
+- if there is a white wire, at least 3 wires should be cut.
+
+- at most one of red and lime wires should be cut."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=535545277]
+offset_left = 564.0
+offset_top = 251.0
+offset_right = 1008.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Fusebox Manual"
