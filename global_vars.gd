@@ -7,6 +7,8 @@ signal fuseboxWireCut
 signal platformerCompleted
 signal xorPuzzleCompleted
 
+signal spawnPackage
+
 # should be reset on replay
 var currentGUI = null
 var hasWirecutters := true

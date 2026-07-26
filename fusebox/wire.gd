@@ -15,10 +15,10 @@ func _ready() -> void:
 
 
 func _on_input_event(_viewport, event, _shape_i):
+	if (!globalVars.hasWirecutters): return
 	if (cut): return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			print("pressed")
 			wire_cut.emit()
 			cut = true;
 			

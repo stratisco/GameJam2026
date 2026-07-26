@@ -24,7 +24,6 @@ func unregisterArea(area: InteractionArea):
 func _process(_delta: float) -> void:
 	if activeAreas.size() > 0 && canInteract:
 		activeAreas.sort_custom(_sortByDistanceToPlayer)
-		#label.text = baseText + activeAreas[0].actionName #set label text here
 		label.global_position = activeAreas[0].global_position
 		label.global_position.y -= 100
 		label.global_position.x -= label.size.x / 2

@@ -6,6 +6,9 @@ extends Node2D
 @onready var canvas_modulate: CanvasModulate = $AffectedByShadow/CanvasModulate
 @onready var player: CharacterBody2D = %Player
 
+const PACKAGE = preload("uid://doouoohrlp8on")
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,10 +19,14 @@ func _ready() -> void:
 	globalVars.platformerCompleted.connect(platformer_complete)
 	globalVars.xorPuzzleCompleted.connect(xor_puzzle_complete)
 
+	globalVars.spawnPackage.connect(spawnPackage)
 
 
 
 
+func spawnPackage():
+	$AffectedByShadow/Package.global_position = Vector2(1030, 1529)
+	
 
 func fusebox_wire_cut():
 	$AffectedByShadow/PowerCords/PowerCord1.turn_cable_off()
