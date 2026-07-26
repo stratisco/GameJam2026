@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3xxev5u7qfmg"
-path="res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"
+uid="uid://doyvxwkcpc2ie"
+path="res://.godot/imported/New Piskel-2.png (2).png-6c304159941be48abe055668a1923995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/PurpleWire.png"
-dest_files=["res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"]
+source_file="res://main/book/New Piskel-2.png (2).png"
+dest_files=["res://.godot/imported/New Piskel-2.png (2).png-6c304159941be48abe055668a1923995.ctex"]
 
 [params]
 

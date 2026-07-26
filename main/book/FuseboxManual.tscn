@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dcmyldaqocosa"]
 
+[ext_resource type="Script" uid="uid://wmedk547fhvs" path="res://main/book/fusebox_manual.gd" id="1_ft32v"]
 [ext_resource type="Texture2D" uid="uid://ch10mmjqs7px0" path="res://assets/book.png" id="1_wjlsm"]
 
 [node name="Manual" type="Node2D" unique_id=1134460353]
+script = ExtResource("1_ft32v")
 
 [node name="Book" type="Sprite2D" parent="." unique_id=444670795]
 position = Vector2(956, 518.00006)

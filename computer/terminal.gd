@@ -57,7 +57,7 @@ func parseTextEntry(text):
 		"credit":
 			if (text == "12784396"):
 				if itemOrdered == "Wire Cutters":
-					labelText.push_front("Wire Cutters ordered.")
+					labelText.push_front("Wire Cutters ordered. They will be delivered to your door.")
 					globalVars.spawnPackage.emit();
 					globalVars.wirecuttersOrdered = true
 				else:

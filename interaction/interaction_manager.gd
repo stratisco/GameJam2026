@@ -33,8 +33,13 @@ func _process(_delta: float) -> void:
 		
 		
 func _sortByDistanceToPlayer(area1, area2):
-	var area1ToPlayer = player.global_position.distance_to(area1.global_position)
-	var area2ToPlayer = player.global_position.distance_to(area2.global_position)
+	print(%Player)
+	print(player)
+	print(%Player.global_position)
+	
+	print(area1.global_position)
+	var area1ToPlayer = %Player.global_position.distance_to(area1.global_position)
+	var area2ToPlayer = %Player.global_position.distance_to(area2.global_position)
 	return area1ToPlayer < area2ToPlayer
 		
 
