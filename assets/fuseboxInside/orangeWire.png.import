@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwr7skl30ixt2"
-path="res://.godot/imported/OrangeWire.png-83be30254c227cfc2b9424daf61e48a8.ctex"
+path="res://.godot/imported/orangeWire.png-a9f3db879a434b548f603dba6bd94f2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/OrangeWire.png"
-dest_files=["res://.godot/imported/OrangeWire.png-83be30254c227cfc2b9424daf61e48a8.ctex"]
+source_file="res://assets/fuseboxInside/orangeWire.png"
+dest_files=["res://.godot/imported/orangeWire.png-a9f3db879a434b548f603dba6bd94f2e.ctex"]
 
 [params]
 
