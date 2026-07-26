@@ -21,11 +21,11 @@ func _process(_delta: float) -> void:
 	var seconds := total % 60
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
 	
-	if time_left <= 15 and not ten_second_signal_sent:
+	if time_left <= 12 and not ten_second_signal_sent:
 		ten_seconds_left.emit()
 		ten_second_signal_sent = true
 		
-	if time_left <= 2.5 and not one_second_signal_sent:
+	if time_left <= 3 and not one_second_signal_sent:
 		one_seconds_left.emit()
 		one_second_signal_sent = true
 		
