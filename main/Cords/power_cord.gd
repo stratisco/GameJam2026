@@ -9,12 +9,6 @@ func _ready() -> void:
 	line.points = path.curve.get_baked_points()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-
 
 func turn_cable_off():
-	line.default_color = '676767'
+	line.default_color = '232323'

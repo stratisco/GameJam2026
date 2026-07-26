@@ -9,7 +9,7 @@ signal xorPuzzleCompleted
 
 # should be reset on replay
 var currentGUI = null
-var hasWirecutters := false
+var hasWirecutters := true
 var wirecuttersOrdered := false
 
 

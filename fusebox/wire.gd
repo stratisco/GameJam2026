@@ -1,10 +1,10 @@
 extends Node2D
 
+const WIRE := preload("uid://dahm1ry6bsbvv")
 
 signal wire_cut
 
-@onready var area_2d: Area2D = $Area2D
-
+@export var area_2d: Area2D
 
 var cut := false
 
@@ -15,8 +15,13 @@ func _ready() -> void:
 
 
 func _on_input_event(_viewport, event, _shape_i):
-	if (!globalVars.hasWirecutters): return
+	if (cut): return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			print("pressed")
 			wire_cut.emit()
-		
+			cut = true;
+			
+			
+func getArea() -> Area2D:
+	return area_2d

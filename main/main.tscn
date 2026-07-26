@@ -167,6 +167,4 @@ offset_bottom = 292.0
 theme_override_font_sizes/font_size = 30
 text = "0:00"
 
-[connection signal="one_seconds_left" from="TimerGui/LevelTimer" to="." method="_on_level_timer_one_seconds_left"]
-[connection signal="ten_seconds_left" from="TimerGui/LevelTimer" to="." method="_on_level_timer_ten_seconds_left"]
 [connection signal="timeout" from="TimerGui/LevelTimer" to="." method="_on_level_timer_timeout"]
