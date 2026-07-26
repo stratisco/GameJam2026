@@ -9,8 +9,10 @@ var interact: Callable = func():
 
 
 func _on_body_entered(_body: Node2D) -> void:
+	if (_body != $"../../../NoShadow/Player"): return
 	InteractionManager.registerArea(self)
 
 
 func _on_body_exited(_body: Node2D) -> void:
+	if (_body != $"../../../NoShadow/Player"): return
 	InteractionManager.unregisterArea(self)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v3qi7b0ld23a"
-path="res://.godot/imported/yellowWire.png-5c95e0199a4f9b5bf31734669b8458a6.ctex"
+path="res://.godot/imported/YellowWire.png-37c154cc5512bcb31d9b01f66455d521.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/yellowWire.png"
-dest_files=["res://.godot/imported/yellowWire.png-5c95e0199a4f9b5bf31734669b8458a6.ctex"]
+source_file="res://assets/fuseboxInside/YellowWire.png"
+dest_files=["res://.godot/imported/YellowWire.png-37c154cc5512bcb31d9b01f66455d521.ctex"]
 
 [params]
 

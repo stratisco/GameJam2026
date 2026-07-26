@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://doouoohrlp8on"]
+
+[ext_resource type="Script" uid="uid://d1oghkv80rbat" path="res://main/package/package.gd" id="1_wt87o"]
+[ext_resource type="PackedScene" uid="uid://dq0qxbnhueebn" path="res://interaction/interactionArea/interactionArea.tscn" id="2_csv5u"]
+[ext_resource type="Texture2D" uid="uid://dc04exxe2625p" path="res://assets/package.png" id="3_hsosu"]
+
+[node name="Package" type="Node2D" unique_id=948972031]
+script = ExtResource("1_wt87o")
+
+[node name="InteractionArea" parent="." unique_id=1880475507 instance=ExtResource("2_csv5u")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=187925729]
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("3_hsosu")

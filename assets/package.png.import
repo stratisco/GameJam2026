@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3xxev5u7qfmg"
-path="res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"
+uid="uid://dc04exxe2625p"
+path="res://.godot/imported/package.png-ab8216113567d5170026a2b04edd3295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fuseboxInside/PurpleWire.png"
-dest_files=["res://.godot/imported/PurpleWire.png-29e9a2433dde920dfaf874014792b069.ctex"]
+source_file="res://assets/package.png"
+dest_files=["res://.godot/imported/package.png-ab8216113567d5170026a2b04edd3295.ctex"]
 
 [params]
 

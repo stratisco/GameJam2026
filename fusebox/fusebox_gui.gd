@@ -18,7 +18,6 @@ func _ready() -> void:
 
 func _on_wire_cut(i: int):
 	
-	print("wire" + str(i))
 	match i:
 		0:
 			$Wires/Wire/Area2D/AnimatedSprite2D.animation = "cut"
@@ -31,7 +30,6 @@ func _on_wire_cut(i: int):
 	
 	if [0, 2, 4, 7].has(i):
 		wirescut.append(i)
-		print(wirescut)
 		if (wirescut.size() == 4):
 			globalVars.fuseboxWireCut.emit()
 			exit()
