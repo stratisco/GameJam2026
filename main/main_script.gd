@@ -8,11 +8,25 @@ extends Node2D
 func _ready() -> void:
 	globalVars.totalAttemps += 1
 	globalVars.game_over_signal.connect(game_over)
+	
+	globalVars.fuseboxWireCut.connect(fusebox_wire_cut)
+	globalVars.platformerCompleted.connect(platformer_complete)
+	globalVars.xorPuzzleCompleted.connect(xor_puzzle_complete)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+
+
+
+
+func fusebox_wire_cut():
+	$AffectedByShadow/PowerCords/PowerCord1.turn_cable_off()
+
+func platformer_complete():
+	$AffectedByShadow/PowerCords/PowerCord3.turn_cable_off()
+
+func xor_puzzle_complete():
+	$AffectedByShadow/PowerCords/PowerCord2.turn_cable_off()
+
 
 	
 # level timer timeout
@@ -23,7 +37,6 @@ func _on_level_timer_timeout() -> void:
 
 	
 func game_over():
-	print("game over func")
 	# if timer times out the player loses.
 	globalVars.didTheyWin = false
 	

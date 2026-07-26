@@ -59,7 +59,6 @@ func parseTextEntry(text):
 				if itemOrdered == "Wire Cutters":
 					labelText.push_front("Wire Cutters ordered.")
 					globalVars.wirecuttersOrdered = true
-					globalVars.hasWirecutters = true
 				else:
 					labelText.push_front("Insufficient funds. Transaction cancelled.")
 			
