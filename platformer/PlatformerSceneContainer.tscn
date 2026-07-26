@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bjta2ufwm6q3a"]
+[gd_scene format=3 uid="uid://uonhjkddu046"]
 
-[ext_resource type="Script" uid="uid://3fuq6ddnffxh" path="res://platformer/platformer_scene_container.gd" id="1_ongcl"]
+[ext_resource type="Script" path="res://platformer/platformer_scene_container.gd" id="1_ongcl"]
 [ext_resource type="PackedScene" uid="uid://c6ksqajr1ng7" path="res://platformer/platformer.tscn" id="2_07ahg"]
 
 [node name="PlatformerSceneContainer" type="Node2D" unique_id=1988113962]
