@@ -18,18 +18,28 @@ func _ready() -> void:
 
 
 
+var fuseBoxDone = false 
+var platformerDone = false 
+var xorDone = false 
 
-
+func checkForAWin():
+	if fuseBoxDone and platformerDone and xorDone:
+		playerWins()
 
 func fusebox_wire_cut():
 	$AffectedByShadow/PowerCords/PowerCord1.turn_cable_off()
+	fuseBoxDone = true
+	checkForAWin()
 
 func platformer_complete():
 	$AffectedByShadow/PowerCords/PowerCord3.turn_cable_off()
+	platformerDone = true
+	checkForAWin()
 
 func xor_puzzle_complete():
 	$AffectedByShadow/PowerCords/PowerCord2.turn_cable_off()
-
+	xorDone = true
+	checkForAWin()
 
 	
 # level timer timeout
