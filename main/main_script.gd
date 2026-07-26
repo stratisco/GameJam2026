@@ -12,6 +12,7 @@ const PACKAGE = preload("uid://doouoohrlp8on")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$ExplodeBgMusic.play()
 	globalVars.totalAttemps += 1
 	globalVars.game_over_signal.connect(game_over)
 	
@@ -60,7 +61,7 @@ func _on_level_timer_timeout() -> void:
 func game_over():
 	# if timer times out the player loses.
 	globalVars.didTheyWin = false
-	
+	$ExplodeBgMusic.stop()
 	MusicManager.get_node('Explosion').play()
 	await player.explode()
 	
