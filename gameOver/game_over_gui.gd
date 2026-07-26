@@ -38,3 +38,8 @@ func _on_play_again_pressed() -> void:
 	globalVars.totalAttemps = 0
 	
 	_on_try_again_button_pressed()
+
+
+func _on_exit_button_pressed() -> void:
+	await Fader.full_fade()
+	get_tree().quit()
