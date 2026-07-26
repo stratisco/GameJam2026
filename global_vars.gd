@@ -3,11 +3,19 @@ extends Node
 
 signal game_over_signal
 
+signal fuseboxWireCut
+signal platformerCompleted
+signal xorPuzzleCompleted
 
 # should be reset on replay
 var currentGUI = null
 var hasWirecutters := false
 var wirecuttersOrdered := false
+
+
+
+
+
 
 
 # total attempts of the player. Incriments ++1 when the came starts 

@@ -9,7 +9,26 @@
 [ext_resource type="PackedScene" uid="uid://oyj82ht3nx8k" path="res://main/platformer_game_console/game_console_thing.tscn" id="5_67ri8"]
 [ext_resource type="Texture2D" uid="uid://bkgqy0jfoiyog" path="res://main/bomb/bomb_spritesheet.png" id="6_grrlh"]
 [ext_resource type="PackedScene" uid="uid://bqs0yjhc8tq5s" path="res://fusebox/fusebox.tscn" id="8_0i4oc"]
+[ext_resource type="PackedScene" uid="uid://dvpbt2yd3sl8u" path="res://main/Cords/PowerCord.tscn" id="9_bsumw"]
 [ext_resource type="Script" uid="uid://blrxw1p3gwfkr" path="res://main/timer/level_timer.gd" id="10_0i4oc"]
+
+[sub_resource type="Curve2D" id="Curve2D_fwcvl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -237, 172, -30.606056, 16.363636, 30.606056, -16.363636, -151, 41, -34.999996, 22.42424, 34.999996, -22.42424, -57, 26, 0, 0, 0, 0, -21, -54)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_bsumw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -707, 304, -110.66667, 15.333334, 110.66667, -15.333334, -486, 237, -102.09478, 40.496773, 102.09478, -40.496773, -136, 249, -91.00709, 87.993515, 91.00709, -87.993515, 93, 235, 33.666668, 86, -33.666668, -86, 9, 36, 0, 0, 0, 0, -14, -136)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_73k8k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1066, -413, -101.51334, 28.233335, 101.51334, -28.233335, -928, -332, -157.93939, -50.9697, 157.93939, 50.9697, -659, -372, -176.21211, -86.0606, 176.21211, 86.0606, -288, -366, -19.233335, -104.060005, 19.233335, 104.060005, -129, -144, 0, 0, 0, 0, -29, -59)
+}
+point_count = 6
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i4oc"]
 atlas = ExtResource("6_grrlh")
@@ -46,40 +65,86 @@ script = ExtResource("1_bsumw")
 [node name="AffectedByShadow" type="Node2D" parent="." unique_id=779665360]
 
 [node name="GameMap" parent="AffectedByShadow" unique_id=965882172 instance=ExtResource("1_0wfyh")]
+metadata/_edit_lock_ = true
+
+[node name="PowerCords" type="Node" parent="AffectedByShadow" unique_id=1083590467]
+
+[node name="PowerCord1" parent="AffectedByShadow/PowerCords" unique_id=765344182 node_paths=PackedStringArray("path") instance=ExtResource("9_bsumw")]
+position = Vector2(1271, 552)
+path = NodePath("Path2D")
+metadata/_edit_lock_ = true
+
+[node name="Path2D" type="Path2D" parent="AffectedByShadow/PowerCords/PowerCord1" unique_id=2071094010]
+curve = SubResource("Curve2D_fwcvl")
+metadata/_edit_lock_ = true
+
+[node name="PowerCord2" parent="AffectedByShadow/PowerCords" unique_id=262021741 node_paths=PackedStringArray("path") instance=ExtResource("9_bsumw")]
+position = Vector2(1767, 419)
+path = NodePath("Path2D")
+metadata/_edit_lock_ = true
+
+[node name="Path2D" type="Path2D" parent="AffectedByShadow/PowerCords/PowerCord2" unique_id=2140741125]
+position = Vector2(-55, 50)
+curve = SubResource("Curve2D_bsumw")
+metadata/_edit_lock_ = true
+
+[node name="PowerCord3" parent="AffectedByShadow/PowerCords" unique_id=560781042 node_paths=PackedStringArray("path") instance=ExtResource("9_bsumw")]
+position = Vector2(2112, 1154)
+path = NodePath("Path2D")
+metadata/_edit_lock_ = true
+
+[node name="Path2D" type="Path2D" parent="AffectedByShadow/PowerCords/PowerCord3" unique_id=854590453]
+position = Vector2(-2, 111)
+curve = SubResource("Curve2D_73k8k")
+metadata/_edit_lock_ = true
 
 [node name="CreditCard" parent="AffectedByShadow" unique_id=948972031 instance=ExtResource("3_sugp2")]
+z_index = 1
 position = Vector2(62, 385)
+metadata/_edit_lock_ = true
 
 [node name="WeirdPuzzleThing" parent="AffectedByShadow" unique_id=1249777939 instance=ExtResource("3_tbgi4")]
+z_index = 1
 position = Vector2(1744, 271)
+metadata/_edit_lock_ = true
 
 [node name="GameConsoleThing" parent="AffectedByShadow" unique_id=189404725 instance=ExtResource("5_67ri8")]
+z_index = 1
 position = Vector2(2103, 1095)
+metadata/_edit_lock_ = true
 
 [node name="ComputerObject" parent="AffectedByShadow" unique_id=650850704 instance=ExtResource("5_4dugh")]
+z_index = 1
 position = Vector2(652, 509)
+metadata/_edit_lock_ = true
+
+[node name="Fusebox" parent="AffectedByShadow" unique_id=1891370771 instance=ExtResource("8_0i4oc")]
+z_index = 1
+position = Vector2(1256, 480)
+metadata/_edit_lock_ = true
 
 [node name="Bomb" type="AnimatedSprite2D" parent="AffectedByShadow" unique_id=1433976809]
+z_index = 1
 position = Vector2(1038.0001, 721)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_na0o7")
 animation = &"fuse"
 autoplay = "fuse"
 frame_progress = 0.8309086
+metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="AffectedByShadow" unique_id=1045904958]
 visible = false
 color = Color(0.07683582, 0.07683582, 0.07683582, 1)
-
-[node name="Fusebox" parent="AffectedByShadow" unique_id=1891370771 instance=ExtResource("8_0i4oc")]
-position = Vector2(1256, 480)
+metadata/_edit_lock_ = true
 
 [node name="NoShadow" type="CanvasLayer" parent="." unique_id=381471495]
 follow_viewport_enabled = true
 
 [node name="Player" parent="NoShadow" unique_id=1758529995 instance=ExtResource("2_sugp2")]
 unique_name_in_owner = true
-position = Vector2(1139, 699)
+position = Vector2(1114, 709)
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="NoShadow/Player" unique_id=1927055518]
 position_smoothing_enabled = true

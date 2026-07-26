@@ -21,7 +21,6 @@ func _on_wire_cut(i: int):
 		pass # correct wire cut
 	else:
 		globalVars.game_over_signal.emit()
-		print("emit game over")
 		
 		
 
